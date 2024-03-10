@@ -1,0 +1,87 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+    font-family: "Raleway", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+.no-scroll {
+    overflow: hidden;
+}
+
+/* Grid main content inicio */
+#inicio-main-content {
+    display: flex;
+    flex-direction: column;
+    gap: clamp(0.75em, 2vw, 1.5em);
+}
+
+#inicio-main-content section {
+    padding: clamp(0.75em, 2vw, 1.5em);
+    border-radius: 12px;
+    min-height: 300px;
+}
+
+#inicio-main-content section h2 {
+    font-size: clamp(1.5em, 2vw, 3em);
+}
+
+#inicio-main-content #inicio-experiencia {
+    grid-area: exp;
+}
+
+#inicio-main-content #inicio-proyectos {
+    grid-area: pro;
+}
+
+#inicio-main-content #inicio-objetivos {
+    grid-area: obj;
+}
+
+#inicio-main-content #inicio-contacto {
+    grid-area: con;
+}
+
+
+@media screen and (width >=1536px) {
+    #inicio-main-content {
+        display: grid;
+        grid-template-areas:
+            "exp exp exp obj"
+            "pro pro pro obj"
+            "con con con con"
+        ;
+    }
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+    width: 16px;
+}
+
+::-webkit-scrollbar-track {
+    background: #414141;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #c0c0c0;
+    border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #969696;
+}
+
+/* Selección */
+::selection {
+    color: rgb(32, 32, 32);
+    background: rgb(255, 162, 0);
+}
