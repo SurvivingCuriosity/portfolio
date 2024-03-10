@@ -1,6 +1,3 @@
-import React from 'react';
-
-
 export interface ChipProps {
   text: string;
   color: string;
