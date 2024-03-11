@@ -8,7 +8,8 @@ export default {
         "infinite-scroll": "infinite-scroll 15s linear infinite",
         wave: "wave 1s ease-in-out 1.5s",
         "fade-in-top":
-          "fade-in-top 1.2s cubic-bezier(0.390, 0.575, 0.565, 1.000)   both",
+          "fade-in-top 0.8s cubic-bezier(0.390, 0.575, 0.565, 1.000)   both",
+        "in-top": "in-top 0.8s cubic-bezier(0.390, 0.575, 0.565, 1.000)   both",
       },
       keyframes: {
         text: {
@@ -46,6 +47,14 @@ export default {
           to: {
             transform: "translateY(0)",
             opacity: "1",
+          },
+        },
+        "in-top": {
+          "0%": {
+            transform: "translateY(-32px)",
+          },
+          to: {
+            transform: "translateY(0)",
           },
         },
       },

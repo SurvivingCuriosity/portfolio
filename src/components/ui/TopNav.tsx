@@ -7,6 +7,7 @@ import { Box } from './Box';
 export const TopNav = () => {
     const [isOpen, setIsOpen] = useState<boolean>(false);
 
+
     useEffect(() => {
         if (isOpen) {
             document.body.classList.add('no-scroll');
@@ -25,7 +26,7 @@ export const TopNav = () => {
     };
 
     return (
-        <div className={`absolute top-0 h-full w-full overflow-hidden`}>
+        <div className=''>
             <Box>
                 <div className='mx-auto flex flex-row items-center justify-between border-b border-neutral-400 p-2 text-white'>
 
@@ -38,22 +39,26 @@ export const TopNav = () => {
                         </a>
                     </div>
 
-                    <button onClick={toggleMenu} className="z-20 flex size-6 flex-col justify-center gap-2">
+                    <button onClick={toggleMenu} className="z-20 flex size-6 flex-col justify-center gap-2 xl:hidden">
                         <span className={`${isOpen ? 'rotate-[45deg] scale-[120%]' : 'rotate-0'} h-0.5 w-full rounded-lg bg-white transition-all duration-200 origin-top-left`}></span>
                         <span className={`${isOpen ? 'opacity-0' : 'opacity-1'} h-0.5 w-full rounded-lg bg-white transition-all duration-200 origin-bottom-left`}></span>
                         <span className={`${isOpen ? '-rotate-[45deg] scale-[120%]' : 'rotate-0'} h-0.5 w-full rounded-lg bg-white transition-all duration-200 origin-bottom-left`}></span>
                     </button>
 
+                    <ul className='hidden xl:flex xl:flex-row xl:gap-6'>
+                        <li><Link className='rounded-md p-2 transition-all duration-200 hover:bg-neutral-800' to='/'>Inicio</Link></li>
+                        <li><Link className='rounded-md p-2 transition-all duration-200 hover:bg-neutral-800' to='/proyectos'>Proyectos</Link></li>
+                        <li><Link className='rounded-md p-2 transition-all duration-200 hover:bg-neutral-800' to='/experiencia'>Experiencia</Link></li>
+                        <li><Link className='rounded-md p-2 transition-all duration-200 hover:bg-neutral-800' to='#'>Contacto</Link></li>
+                    </ul>
 
-                    <div className={`absolute top-0 z-10 h-dvh w-screen bg-black/90 backdrop-blur-[2px] ${isOpen ? 'left-0' : 'left-full'} transition-all duration-200 pt-20 px-7`}>
-                        <div className='border'>
-                            <ul>
-                                <li><Link to='#'>Inicio</Link></li>
-                                <li><Link to='#'>Proyectos</Link></li>
-                                <li><Link to='#'>Experiencia</Link></li>
-                                <li><Link to='#'>Contacto</Link></li>
+                    <div className={`block xl:hidden fixed top-0 z-10 h-dvh w-screen bg-black/90 backdrop-blur-[2px] ${isOpen ? 'left-0' : 'left-full'} transition-all duration-200 pt-20 px-7`}>
+                            <ul className='border'>
+                                <li onClick={() => { setIsOpen(false) }}><Link to='/'>Inicio</Link></li>
+                                <li onClick={() => { setIsOpen(false) }}><Link to='/proyectos'>Proyectos</Link></li>
+                                <li onClick={() => { setIsOpen(false) }}><Link to='/experiencia'>Experiencia</Link></li>
+                                <li onClick={() => { setIsOpen(false) }}><Link to='#'>Contacto</Link></li>
                             </ul>
-                        </div>
                     </div>
 
                 </div>

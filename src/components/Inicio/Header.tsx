@@ -1,13 +1,12 @@
-import { Box } from '@components/ui'
 import { Heading } from './Heading'
 import { ListaAptitudes } from './ListaAptitudes'
 import { SkillsCarousel } from './SkillsCarousel'
 
 export const Header = () => {
     return (
-        <header className="flex items-start justify-center pb-12">
-            <div className='flex flex-col items-center overflow-hidden pt-16 2xl:pt-32'>
-                <Box>
+        <header className="flex items-start justify-center md:py-12 lg:py-16 xl:py-24">
+            <div className='flex flex-col items-center overflow-hidden'>
+                
                     <div className="flex flex-col space-y-6 2xl:flex-row 2xl:space-x-4 2xl:space-y-0">
                         <div className="flex animate-fade-in-top flex-col justify-between 2xl:w-2/3">
                             <Heading />
@@ -17,9 +16,9 @@ export const Header = () => {
                         <ListaAptitudes />
 
                     </div>
-                </Box>
+                
 
-                <div style={{ animationDelay: '1.2s' }} className="mt-8 inline-flex w-full animate-fade-in-top flex-nowrap overflow-hidden [mask-image:_linear-gradient(to_right,transparent_0,_black_128px,_black_calc(100%-128px),transparent_100%)] md:w-1/2 2xl:mt-20">
+                <div style={{ animationDelay: '0.8s' }} className="mt-8 inline-flex w-full animate-fade-in-top flex-nowrap overflow-hidden [mask-image:_linear-gradient(to_right,transparent_0,_black_128px,_black_calc(100%-128px),transparent_100%)] md:w-1/2 2xl:mt-20">
                     <SkillsCarousel />
                 </div>
 

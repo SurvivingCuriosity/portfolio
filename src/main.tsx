@@ -7,13 +7,26 @@ import {
   Route,
   RouterProvider,
 } from "react-router-dom";
-import { Inicio, MainLayout } from '@pages/index'
+import { Experiencia, GoBackLayout, Inicio, MainLayout, Proyectos } from './pages';
+
 
 const router = createBrowserRouter(
   createRoutesFromElements(
-    <Route path="/" element={<MainLayout />}>
-      <Route path="/" element={<Inicio />} />
-    </Route>
+    <>
+      <Route path="/" element={<MainLayout />}>
+        <Route path="/" element={<Inicio />} />
+
+        <Route path="/experiencia" element={<GoBackLayout />}>
+          <Route path="/experiencia" element={<Experiencia />} />
+        </Route>
+
+        <Route path="/proyectos" element={<GoBackLayout />}>
+          <Route path="/proyectos" element={<Proyectos />} />
+        </Route>
+      </Route>
+
+
+    </>
   )
 );
 

@@ -1,2 +1,5 @@
 export * from './Inicio'
 export * from './MainLayout'
+export * from './Experiencia'
+export * from './Proyectos'
+export * from './GoBackLayout'
