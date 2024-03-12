@@ -41,7 +41,7 @@ export default {
         },
         "fade-in-top": {
           "0%": {
-            transform: "translateY(-10px)",
+            transform: "translateY(-5px)",
             opacity: "0",
           },
           to: {

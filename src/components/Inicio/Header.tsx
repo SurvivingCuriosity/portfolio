@@ -4,7 +4,7 @@ import { SkillsCarousel } from './SkillsCarousel'
 
 export const Header = () => {
     return (
-        <header className="flex items-start justify-center md:py-12 lg:py-16 xl:py-24">
+        <header className="flex items-start justify-center">
             <div className='flex flex-col items-center overflow-hidden'>
                 
                     <div className="flex flex-col space-y-6 2xl:flex-row 2xl:space-x-4 2xl:space-y-0">
@@ -18,7 +18,7 @@ export const Header = () => {
                     </div>
                 
 
-                <div style={{ animationDelay: '0.8s' }} className="mt-8 inline-flex w-full animate-fade-in-top flex-nowrap overflow-hidden [mask-image:_linear-gradient(to_right,transparent_0,_black_128px,_black_calc(100%-128px),transparent_100%)] md:w-1/2 2xl:mt-20">
+                <div style={{ animationDelay: '0.8s' }} className="mt-8 inline-flex w-full animate-fade-in-top flex-nowrap overflow-hidden [mask-image:_linear-gradient(to_right,transparent_0,_black_128px,_black_calc(100%-128px),transparent_100%)] md:w-10/12 2xl:mt-20">
                     <SkillsCarousel />
                 </div>
 

@@ -39,20 +39,20 @@ export const TopNav = () => {
                         </a>
                     </div>
 
-                    <button onClick={toggleMenu} className="z-20 flex size-6 flex-col justify-center gap-2 xl:hidden">
+                    <button onClick={toggleMenu} className="z-20 flex size-6 flex-col justify-center gap-2 lg:hidden">
                         <span className={`${isOpen ? 'rotate-[45deg] scale-[120%]' : 'rotate-0'} h-0.5 w-full rounded-lg bg-white transition-all duration-200 origin-top-left`}></span>
                         <span className={`${isOpen ? 'opacity-0' : 'opacity-1'} h-0.5 w-full rounded-lg bg-white transition-all duration-200 origin-bottom-left`}></span>
                         <span className={`${isOpen ? '-rotate-[45deg] scale-[120%]' : 'rotate-0'} h-0.5 w-full rounded-lg bg-white transition-all duration-200 origin-bottom-left`}></span>
                     </button>
 
-                    <ul className='hidden xl:flex xl:flex-row xl:gap-6'>
+                    <ul className='hidden lg:flex lg:flex-row lg:gap-6'>
                         <li><Link className='rounded-md p-2 transition-all duration-200 hover:bg-neutral-800' to='/'>Inicio</Link></li>
                         <li><Link className='rounded-md p-2 transition-all duration-200 hover:bg-neutral-800' to='/proyectos'>Proyectos</Link></li>
                         <li><Link className='rounded-md p-2 transition-all duration-200 hover:bg-neutral-800' to='/experiencia'>Experiencia</Link></li>
                         <li><Link className='rounded-md p-2 transition-all duration-200 hover:bg-neutral-800' to='#'>Contacto</Link></li>
                     </ul>
 
-                    <div className={`block xl:hidden fixed top-0 z-10 h-dvh w-screen bg-black/90 backdrop-blur-[2px] ${isOpen ? 'left-0' : 'left-full'} transition-all duration-200 pt-20 px-7`}>
+                    <div className={`block lg:hidden fixed top-0 z-10 h-dvh w-screen bg-black/90 backdrop-blur-[2px] ${isOpen ? 'left-0' : 'left-full'} transition-all duration-200 pt-20 px-7`}>
                             <ul className='border'>
                                 <li onClick={() => { setIsOpen(false) }}><Link to='/'>Inicio</Link></li>
                                 <li onClick={() => { setIsOpen(false) }}><Link to='/proyectos'>Proyectos</Link></li>
