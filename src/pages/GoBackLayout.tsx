@@ -9,9 +9,7 @@ export const GoBackLayout = () => {
           <img src={back_arrow} alt="Icono flecha atrás" className="size-8"></img>
           <p className="text-neutral-200">Atrás</p>
       </Link>
-      <main className="mt-8">
         <Outlet />
-      </main>
     </>
   )
 }
