@@ -4,7 +4,7 @@ export default {
   theme: {
     extend: {
       animation: {
-        text: "text 5s ease infinite",
+        text: "text 8s ease infinite",
         "infinite-scroll": "infinite-scroll 15s linear infinite",
         wave: "wave 1s ease-in-out 1.5s",
         "fade-in-top":

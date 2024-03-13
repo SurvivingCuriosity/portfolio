@@ -3,6 +3,12 @@ import github_img from '@img/skills/github-logo.svg';
 import linkedin_img from '@img/skills/linkedin-logo.svg';
 import { Link } from 'react-router-dom';
 import { Box } from './Box';
+import spain_icon from '@img/icons/spain_flag.svg'
+import uk_icon from '@img/icons/uk_flag.svg'
+import moon_icon from '@img/icons/moon_icon.svg'
+import sun_icon from '@img/icons/sun_icon.svg'
+
+import { FlexRow } from './FlexRow';
 
 export const TopNav = () => {
     const [isOpen, setIsOpen] = useState<boolean>(false);
@@ -52,15 +58,48 @@ export const TopNav = () => {
                         <li><Link className='rounded-md p-2 transition-all duration-200 hover:bg-neutral-800' to='#'>Contacto</Link></li>
                     </ul>
 
-                    <div className={`block lg:hidden fixed top-0 z-10 h-dvh w-screen bg-black/90 backdrop-blur-[2px] ${isOpen ? 'left-0' : 'left-full'} transition-all duration-200 pt-20 px-7`}>
-                            <ul className='border'>
-                                <li onClick={() => { setIsOpen(false) }}><Link to='/'>Inicio</Link></li>
-                                <li onClick={() => { setIsOpen(false) }}><Link to='/proyectos'>Proyectos</Link></li>
-                                <li onClick={() => { setIsOpen(false) }}><Link to='/experiencia'>Experiencia</Link></li>
-                                <li onClick={() => { setIsOpen(false) }}><Link to='#'>Contacto</Link></li>
-                            </ul>
-                    </div>
 
+                    <div className={`flex flex-col justify-between lg:hidden fixed top-0 z-10 h-dvh w-screen bg-black/90 backdrop-blur-[2px] ${isOpen ? 'left-0' : 'left-full'} transition-all duration-200 pt-20 pb-4`}>
+
+                        <ul className={`w-full px-7 *:mb-8 *:border-b *:text-2xl`}>
+                            <li onClick={() => { setIsOpen(false) }}><Link to='/'>Inicio</Link></li>
+                            <li onClick={() => { setIsOpen(false) }}><Link to='/proyectos'>Proyectos</Link></li>
+                            <li onClick={() => { setIsOpen(false) }}><Link to='/experiencia'>Experiencia</Link></li>
+                            <li onClick={() => { setIsOpen(false) }}><Link to='#'>Contacto</Link></li>
+                        </ul>
+
+                        <FlexRow justifyBetween className='px-7'>
+
+                            <button className='flex w-fit items-center gap-4 rounded-lg p-1 px-3 text-sm transition-colors duration-200 hover:bg-neutral-800/40'>
+
+                                {true
+                                    ?
+                                    <>
+                                        <img src={uk_icon} className='size-10' alt='Bandera británica'></img>
+                                    </>
+                                    :
+                                    <>
+                                        <img src={spain_icon} className='size-10' alt='Bandera española'></img>
+                                    </>
+                                }
+                            </button>
+
+                            <button className='flex w-fit items-center gap-4 rounded-lg p-1 px-3 text-sm transition-colors duration-200 hover:bg-neutral-800/40'>
+
+                                {false
+                                    ?
+                                    <>
+                                        <img src={moon_icon} className='size-7' alt='Icono luna'></img>
+                                    </>
+                                    :
+                                    <>
+                                        <img src={sun_icon} className='size-7' alt='Icono sol'></img>
+                                    </>
+                                }
+                            </button>
+
+                        </FlexRow>
+                    </div>
                 </div>
             </Box>
         </div>

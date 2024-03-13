@@ -2,12 +2,13 @@ import React from 'react'
 
 export interface FlexRowProps {
     className?: string;
-    children: React.ReactElement[]
+    children: React.ReactElement[];
+    justifyBetween?:boolean;
 }
 
-export const FlexRow = ({ children, className = '' }: FlexRowProps) => {
+export const FlexRow = ({ children, className = '', justifyBetween = false }: FlexRowProps) => {
     return (
-        <div className={`flex flex-row ${className}`}>
+        <div className={`flex flex-row ${className} ${justifyBetween && 'justify-between'}`}>
             {children}
         </div>
     )

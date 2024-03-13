@@ -5,6 +5,7 @@
       "@components/*": ["components/*"],
       "@pages/*": ["pages/*"],
       "@db/*": ["db/*"],
+      "@hooks/*": ["hooks/*"],
       "@img/*": ["assets/img/*"]
     },
     "target": "ES2020",

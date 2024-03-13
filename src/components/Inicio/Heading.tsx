@@ -4,7 +4,7 @@ import saludo_img from '@img/icons/saludo_icon_trans.svg'
 export const Heading = () => {
     return (
         <div>
-            <div className="flex items-center gap-2 text-neutral-200">
+            <div className="flex items-center gap-2 pt-2 text-neutral-200">
                 <img className='2xl:size-22 size-7 animate-wave md:size-8 lg:size-10 xl:size-10' src={saludo_img}></img>
                 <p style={{ fontSize: 'clamp(1.1em, 3.5dvw, 2em)' }} className="font-light leading-5">Hola, me llamo</p>
             </div>
