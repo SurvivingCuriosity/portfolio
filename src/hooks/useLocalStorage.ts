@@ -1,28 +1,27 @@
-// import { useCallback, useState } from "react";
+import { useState } from 'react';
 
-// export const useLocalStorage = (key: string, initialValue: string): [string, (value: string) => void] => {
-//     const [storedValue, setStoredValue] = useState<string>(() => {
-//       try {
-//         const item = window.localStorage.getItem(key);
-//         return item ? JSON.parse(item) : initialValue;
-//       } catch (error) {
-//         console.error(error);
-//         return initialValue;
-//       }
-//     });
-  
-//     const setValue = useCallback(
-//       (value: string) => {
-//         try {
-//           const valueToStore = value instanceof Function ? value(storedValue) : value;
-//           setStoredValue(valueToStore);
-//           window.localStorage.setItem(key, JSON.stringify(valueToStore));
-//         } catch (error) {
-//           console.error(error);
-//         }
-//       },
-//       [key, storedValue]
-//     );
-  
-//     return [storedValue, setValue];
-//   }
+type StorageAction<T> = (value: T) => void;
+
+interface UseLocalStorageProps<T> {
+  key: string;
+  initialValue: T;
+}
+
+export const useLocalStorage = <T>({ key, initialValue }: UseLocalStorageProps<T>) => {
+  const storedValue = localStorage.getItem(key);
+  const initial = storedValue ? JSON.parse(storedValue) : initialValue;
+
+  const [value, setValue] = useState<T>(initial);
+
+  const setStoredValue: StorageAction<T> = (newValue) => {
+    setValue(newValue);
+    localStorage.setItem(key, JSON.stringify(newValue));
+  };
+
+  const removeStoredValue = () => {
+    setValue(initialValue);
+    localStorage.removeItem(key);
+  };
+
+  return { value, setValue: setStoredValue, removeValue: removeStoredValue };
+};

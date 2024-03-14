@@ -9,10 +9,11 @@ import moon_icon from '@img/icons/moon_icon.svg'
 import sun_icon from '@img/icons/sun_icon.svg'
 
 import { FlexRow } from './FlexRow';
+import { IDIOMA, TEMA, useAppContext } from 'context/AppContext';
 
 export const TopNav = () => {
     const [isOpen, setIsOpen] = useState<boolean>(false);
-
+    const {idioma,tema, toggleTema, cambiarIdioma} = useAppContext()
 
     useEffect(() => {
         if (isOpen) {
@@ -45,7 +46,7 @@ export const TopNav = () => {
                         </a>
                     </div>
 
-                    <button onClick={toggleMenu} className="z-20 flex size-6 flex-col justify-center gap-2 lg:hidden">
+                    <button aria-label='Botón abrir menú lateral' onClick={toggleMenu} className="z-20 flex size-6 flex-col justify-center gap-2 lg:hidden">
                         <span className={`${isOpen ? 'rotate-[45deg] scale-[120%]' : 'rotate-0'} h-0.5 w-full rounded-lg bg-white transition-all duration-200 origin-top-left`}></span>
                         <span className={`${isOpen ? 'opacity-0' : 'opacity-1'} h-0.5 w-full rounded-lg bg-white transition-all duration-200 origin-bottom-left`}></span>
                         <span className={`${isOpen ? '-rotate-[45deg] scale-[120%]' : 'rotate-0'} h-0.5 w-full rounded-lg bg-white transition-all duration-200 origin-bottom-left`}></span>
@@ -70,9 +71,9 @@ export const TopNav = () => {
 
                         <FlexRow justifyBetween className='px-7'>
 
-                            <button className='flex w-fit items-center gap-4 rounded-lg p-1 px-3 text-sm transition-colors duration-200 hover:bg-neutral-800/40'>
+                            <button onClick={()=>{cambiarIdioma(idioma === IDIOMA.es ? IDIOMA.en : IDIOMA.es)}} className='flex w-fit items-center gap-4 rounded-lg p-1 px-3 text-sm transition-colors duration-200 hover:bg-neutral-800/40'>
 
-                                {true
+                                {idioma === IDIOMA.es
                                     ?
                                     <>
                                         <img src={uk_icon} className='size-10' alt='Bandera británica'></img>
@@ -84,16 +85,18 @@ export const TopNav = () => {
                                 }
                             </button>
 
-                            <button className='flex w-fit items-center gap-4 rounded-lg p-1 px-3 text-sm transition-colors duration-200 hover:bg-neutral-800/40'>
+                            <button onClick={()=>{toggleTema()}} className='flex w-fit items-center gap-4 rounded-lg p-1 px-3 text-sm transition-colors duration-200 hover:bg-neutral-800/40'>
 
-                                {false
+                                {tema === TEMA.light
                                     ?
                                     <>
                                         <img src={moon_icon} className='size-7' alt='Icono luna'></img>
                                     </>
                                     :
                                     <>
+                                    <button>
                                         <img src={sun_icon} className='size-7' alt='Icono sol'></img>
+                                    </button>
                                     </>
                                 }
                             </button>

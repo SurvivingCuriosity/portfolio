@@ -24,12 +24,12 @@ export const ExperienciaInicio = () => {
                             <p style={{ fontSize: 'clamp(1rem, 2.5vw, 1.5rem)' }} className='font-bold'>{exp.nombrePuesto}</p>
 
                             <FlexRow className='items-center gap-1'>
-                                <img src={company_img} className='size-5 rounded-xl' alt={`Logo ${exp.nombreEmpresa}`}></img>
+                                <img src={company_img} className='size-5 rounded-xl' alt={`Icono edificio`}></img>
                                 <p style={{ fontSize: 'clamp(0.8em, 2.5vw, 1.25em)' }} className='text-neutral-400'>{exp.nombreEmpresa}</p>
                             </FlexRow>
 
                             <FlexRow className='items-center gap-1'>
-                                <img src={location_img} className='size-5 rounded-xl' alt={`Logo ${exp.nombreEmpresa}`}></img>
+                                <img src={location_img} className='size-5 rounded-xl' alt={`Icono ubicación`}></img>
                                 <p style={{ fontSize: 'clamp(0.8em, 2.5vw, 1.25em)' }} className='text-neutral-400'>{exp.lugar}</p>
                             </FlexRow>
                         </div>

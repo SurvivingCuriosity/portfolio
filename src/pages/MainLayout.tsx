@@ -9,7 +9,8 @@ export const MainLayout = () => {
       style={{
         backgroundColor: 'rgb(16, 16, 16)',
         backgroundImage: 'radial-gradient(at 50.93% 47.07%, rgb(28, 28, 28) 0, transparent 80%)'
-      }}>
+      }}
+      >
       <TopNav />
       <main className="relative min-h-dvh py-2 md:py-12 lg:py-16 xl:py-24">
         <Box>

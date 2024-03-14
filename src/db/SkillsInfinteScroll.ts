@@ -32,7 +32,7 @@ export const Skills: Skill[] = [
     label: "CSS",
     img: css_img,
     imgAlt: "Icono CSS",
-    color: 'hsl(226, 100%, 50%)', // Azul
+    color: 'hsl(226, 100%, 70%)', // Azul
     fondo: 'hsla(226, 100%, 50%, 0.2)' // Azul semitransparente
   },
   {
