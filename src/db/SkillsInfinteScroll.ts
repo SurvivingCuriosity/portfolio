@@ -14,6 +14,7 @@ export interface Skill {
   img: string;
   imgAlt: string;
   color: string;
+  colorOscuro: string;
   fondo: string;
 }
 
@@ -25,6 +26,7 @@ export const Skills: Skill[] = [
     img: html_img,
     imgAlt: "Icono HTML",
     color: 'hsl(17, 100%, 60%)', // Naranja
+    colorOscuro: 'hsl(17, 100%, 60%)', // Naranja
     fondo: 'hsla(17, 100%, 50%, 0.2)' // Naranja semitransparente
   },
   {
@@ -33,6 +35,7 @@ export const Skills: Skill[] = [
     img: css_img,
     imgAlt: "Icono CSS",
     color: 'hsl(226, 100%, 70%)', // Azul
+    colorOscuro: 'hsl(226, 100%, 70%)', // Azul
     fondo: 'hsla(226, 100%, 50%, 0.2)' // Azul semitransparente
   },
   {
@@ -41,6 +44,7 @@ export const Skills: Skill[] = [
     img: tailwind_img,
     imgAlt: "Icono Tailwind",
     color: 'hsl(198, 100%, 50%)', // Azul
+    colorOscuro: 'hsl(198, 100%, 40%)', // Azul
     fondo: 'hsla(198, 100%, 50%, 0.2)' // Azul semitransparente
   },
   {
@@ -49,6 +53,7 @@ export const Skills: Skill[] = [
     img: js_img,
     imgAlt: "Icono JavaScript",
     color: 'hsl(60, 100%, 50%)', // Amarillo
+    colorOscuro: 'hsl(60, 100%, 20%)', // Amarillo
     fondo: 'hsla(60, 100%, 50%, 0.2)' // Amarillo semitransparente
   },
   {
@@ -57,6 +62,7 @@ export const Skills: Skill[] = [
     img: ts_img,
     imgAlt: "Icono TypeScript",
     color: 'hsl(211, 100%, 70%)', // Azul oscuro
+    colorOscuro: 'hsl(211, 100%, 40%)', // Azul oscuro
     fondo: 'hsla(211, 100%, 30%, 0.2)' // Azul oscuro semitransparente
   },
   {
@@ -65,6 +71,7 @@ export const Skills: Skill[] = [
     img: react_img,
     imgAlt: "Icono React",
     color: 'hsl(189, 100%, 70%)', // Azul claro
+    colorOscuro: 'hsl(189, 100%, 40%)', // Azul claro
     fondo: 'hsla(189, 100%, 80%, 0.2)' // Azul claro semitransparente
   },
   {
@@ -73,6 +80,7 @@ export const Skills: Skill[] = [
     img: redux_img,
     imgAlt: "Icono Redux",
     color: 'hsl(263, 100%, 70%)', // Morado
+    colorOscuro: 'hsl(263, 100%, 40%)', // Morado
     fondo: 'hsla(263, 100%, 50%, 0.2)' // Morado semitransparente
   },
   {
@@ -81,6 +89,7 @@ export const Skills: Skill[] = [
     img: git_img,
     imgAlt: "Icono Git",
     color: 'hsl(10, 100%, 70%)', // Morado
+    colorOscuro: 'hsl(10, 100%, 40%)', // Morado
     fondo: 'hsla(10, 100%, 50%, 0.2)' // Morado semitransparente
   },
   {
@@ -89,6 +98,7 @@ export const Skills: Skill[] = [
     img: github_img,
     imgAlt: "Icono Github",
     color: 'hsl(270, 0%, 70%)', // Morado
+    colorOscuro: 'hsl(270, 0%, 40%)', // Morado
     fondo: 'hsla(270, 0%, 50%, 0.2)' // Morado semitransparente
   },
 ];

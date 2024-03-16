@@ -2,9 +2,13 @@
 import { useEffect, useRef } from 'react';
 import { Chip } from '@components/ui';
 import { Skills } from '@db/SkillsInfinteScroll';
+import { TEMA, useAppContext } from 'context/AppContext';
 
 
 export const SkillsCarousel = () => {
+
+    const {tema} = useAppContext()
+
     const logosRef = useRef<HTMLUListElement>(null);
 
     useEffect(() => {
@@ -26,7 +30,7 @@ export const SkillsCarousel = () => {
                     <Chip
                         text={skill.label}
                         fondo={skill.fondo}
-                        color={skill.color}
+                        color={tema === TEMA.dark ? skill.color : skill.colorOscuro}
                         img={skill.img}
                         imgAlt={skill.imgAlt}
                     />

@@ -81,7 +81,12 @@ html {
 }
 
 /* Selección */
-::selection {
+html.dark ::selection {
     color: rgb(32, 32, 32);
     background: rgb(255, 162, 0);
+}
+
+html:not(.dark) ::selection {
+    color: rgb(32, 32, 32);
+    background: rgb(87, 216, 255);
 }

@@ -11,8 +11,12 @@ export const ExperienciaInicio = () => {
         <SectionInicio titulo='Experiencia laboral'>
             <ul style={{ gap: 'clamp(0.5em, 4vw, 1em)' }} className='flex flex-col'>
                 {ExperienciasLaborales.map(exp => (
+                    <li
+                        key={exp.fechaInicio.getTime()}
+                        style={{ padding: 'clamp(0.5rem, 2vw, 1.5rem)', gap: 'clamp(0.5rem, 2vw, 1.5rem)' }}
+                        className='relative flex flex-row items-center rounded-md bg-neutral-200 p-2 text-sm text-neutral-700 shadow dark:bg-neutral-800 dark:text-neutral-300 dark:shadow-none'
+                    >
 
-                    <li key={exp.fechaInicio.getTime()} style={{ padding: 'clamp(0.5rem, 2vw, 1.5rem)', gap: 'clamp(0.5rem, 2vw, 1.5rem)' }} className='relative flex flex-row items-center rounded-md bg-neutral-800 p-2 text-sm text-neutral-300'>
                         {!exp.fechaFin &&
                             <div className='absolute -left-1 -top-1 block -rotate-6 animate-text rounded-md bg-neutral-600 bg-gradient-to-r from-[#01BE7C] via-[#76ffd6] to-[#01BE7C] px-2 py-0.5 text-xs font-bold text-neutral-900 xl:text-base'>
                                 Actual
@@ -24,13 +28,13 @@ export const ExperienciaInicio = () => {
                             <p style={{ fontSize: 'clamp(1rem, 2.5vw, 1.5rem)' }} className='font-bold'>{exp.nombrePuesto}</p>
 
                             <FlexRow className='items-center gap-1'>
-                                <img src={company_img} className='size-5 rounded-xl' alt={`Icono edificio`}></img>
-                                <p style={{ fontSize: 'clamp(0.8em, 2.5vw, 1.25em)' }} className='text-neutral-400'>{exp.nombreEmpresa}</p>
+                                <img src={company_img} className='size-5 rounded-xl' alt={`Icono edificio`} style={{fill:'red'}}></img>
+                                <p style={{ fontSize: 'clamp(0.8em, 2.5vw, 1.25em)' }} className='text-neutral-600 dark:text-neutral-400'>{exp.nombreEmpresa}</p>
                             </FlexRow>
 
                             <FlexRow className='items-center gap-1'>
                                 <img src={location_img} className='size-5 rounded-xl' alt={`Icono ubicación`}></img>
-                                <p style={{ fontSize: 'clamp(0.8em, 2.5vw, 1.25em)' }} className='text-neutral-400'>{exp.lugar}</p>
+                                <p style={{ fontSize: 'clamp(0.8em, 2.5vw, 1.25em)' }} className='text-neutral-600 dark:text-neutral-400'>{exp.lugar}</p>
                             </FlexRow>
                         </div>
                     </li>

@@ -43,7 +43,6 @@ export const AppContextProvider: React.FC<AppContextProps> = ({ children }) => {
 
   useEffect(() => {
     setTemaLS(tema)
-    toggleDarkMode()
   }, [tema])
 
 
@@ -52,12 +51,7 @@ export const AppContextProvider: React.FC<AppContextProps> = ({ children }) => {
   }, [idioma])
 
 
-  const toggleDarkMode = () => {
-    const html = document.querySelector('html');
-    if (html !== null) {
-      html.classList.toggle('dark');
-    }
-  };
+
 
   return (
     <AppContext.Provider value={{ idioma, cambiarIdioma, tema, toggleTema }}>

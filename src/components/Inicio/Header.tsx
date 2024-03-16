@@ -2,6 +2,7 @@ import { useNavigate } from 'react-router-dom'
 import { Heading } from './Heading'
 import { ListaAptitudes } from './ListaAptitudes'
 import { SkillsCarousel } from './SkillsCarousel'
+import { AnimatedGradientText } from '@components/ui'
 
 export const Header = () => {
     const navigate = useNavigate()
@@ -17,7 +18,7 @@ export const Header = () => {
                 <div className="flex flex-col space-y-6 2xl:flex-row 2xl:space-x-4 2xl:space-y-0">
                     <div className="flex animate-fade-in-top flex-col justify-between 2xl:w-2/3">
                         <Heading />
-                        <p className="my-6 text-balance text-lg text-neutral-400 2xl:my-0">Más de 2 años de experiencia en el desarrollo de aplicaciones con <span className="animate-text bg-gradient-to-r from-yellow-400 via-orange-600 to-yellow-400 bg-clip-text font-bold leading-snug text-transparent">React</span></p>
+                        <p className="my-6 text-balance text-lg text-neutral-900 2xl:my-0 dark:text-neutral-400">Más de 2 años de experiencia en el desarrollo de aplicaciones con <AnimatedGradientText text='React' headingOrder='span' /></p>
                     </div>
 
                     <ListaAptitudes />
