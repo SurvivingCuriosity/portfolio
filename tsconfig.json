@@ -6,7 +6,8 @@
       "@pages/*": ["pages/*"],
       "@db/*": ["db/*"],
       "@hooks/*": ["hooks/*"],
-      "@img/*": ["assets/img/*"]
+      "@img/*": ["assets/img/*"],
+      "@styles/*": ["assets/styles/*"]
     },
     "target": "ES2020",
     "useDefineForClassFields": true,

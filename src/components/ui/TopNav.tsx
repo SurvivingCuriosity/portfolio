@@ -47,10 +47,10 @@ export const TopNav = () => {
                     </button>
 
                     <ul className='hidden lg:flex lg:flex-row lg:gap-6'>
-                        <li><Link className='rounded-md p-2 transition-all duration-200 hover:bg-neutral-800' to='/'>Inicio</Link></li>
-                        <li><Link className='rounded-md p-2 transition-all duration-200 hover:bg-neutral-800' to='/proyectos'>Proyectos</Link></li>
-                        <li><Link className='rounded-md p-2 transition-all duration-200 hover:bg-neutral-800' to='/experiencia'>Experiencia</Link></li>
-                        <li><Link className='rounded-md p-2 transition-all duration-200 hover:bg-neutral-800' to='#'>Contacto</Link></li>
+                        <li><Link className='rounded-md p-2 transition-all duration-200 hover:bg-neutral-300 dark:hover:bg-neutral-800' to='/'>Inicio</Link></li>
+                        <li><Link className='rounded-md p-2 transition-all duration-200 hover:bg-neutral-300 dark:hover:bg-neutral-800' to='/proyectos'>Proyectos</Link></li>
+                        <li><Link className='rounded-md p-2 transition-all duration-200 hover:bg-neutral-300 dark:hover:bg-neutral-800' to='/experiencia'>Experiencia</Link></li>
+                        <li><Link className='rounded-md p-2 transition-all duration-200 hover:bg-neutral-300 dark:hover:bg-neutral-800' to='#'>Contacto</Link></li>
                     </ul>
 
 

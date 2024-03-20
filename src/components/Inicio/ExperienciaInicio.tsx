@@ -41,7 +41,7 @@ export const ExperienciaInicio = () => {
 
                 ))}
             </ul>
-            <Link to='experiencia' className='float-end text-amber-600 underline underline-offset-2'>Más detalles</Link>
+            <Link to='experiencia' className={`float-end text-sky-600 underline underline-offset-2 dark:text-amber-600`}>Más detalles</Link>
         </SectionInicio>
     )
 }
