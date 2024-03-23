@@ -27,14 +27,13 @@ html {
 #inicio-main-content section {
     padding: clamp(0.75em, 2vw, 1.5em);
     border-radius: 12px;
-    min-height: 300px;
 }
 
 #inicio-main-content section h2 {
     font-size: clamp(1.5em, 2vw, 3em);
 }
 
-#inicio-main-content #inicio-experiencia {
+/* #inicio-main-content #inicio-experiencia {
     grid-area: exp;
 }
 
@@ -55,12 +54,12 @@ html {
     #inicio-main-content {
         display: grid;
         grid-template-areas:
-            "exp exp exp obj"
-            "pro pro pro obj"
-            "con con con con"
+            "exp exp exp exp obj obj"
+            "pro pro pro pro obj obj"
+            "con con con con con con"
         ;
     }
-}
+} */
 
 /* Scrollbar */
 ::-webkit-scrollbar {

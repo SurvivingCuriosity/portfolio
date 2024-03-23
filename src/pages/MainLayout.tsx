@@ -9,7 +9,7 @@ export const MainLayout = () => {
 
   return (
     <div
-      className="flex flex-col"
+      className="flex flex-col px-3"
       style={
         tema === TEMA.dark
           ? {
@@ -22,7 +22,7 @@ export const MainLayout = () => {
           }}
     >
       <TopNav />
-      <main className="relative min-h-dvh py-2 md:py-12 lg:py-16 xl:py-24">
+      <main className="relative py-8 md:py-12 lg:py-16 xl:py-24 xl:pt-40">
         <Box>
           <Outlet />
         </Box>

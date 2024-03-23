@@ -4,6 +4,6 @@ export interface BoxProps {
 
 export const Box = ({ children }: BoxProps) => {
   return (
-    <div className='mx-auto px-3 md:w-10/12 lg:w-9/12'>{children}</div>
+    <div className='mx-auto md:w-10/12 lg:w-9/12'>{children}</div>
   )
 }

@@ -12,12 +12,14 @@ export const AnimatedGradientText = ({ text, fontSize, className, headingOrder }
     const { tema } = useAppContext()
 
     return (
-        <HeadingTag className={`font-extrabold leading-snug 2xl:leading-tight animate-text bg-gradient-to-r bg-clip-text text-transparent ${className} 
+        <span className='animated-text-wrapper block'>
+            <HeadingTag className={`font-extrabold leading-snug 2xl:leading-tight animate-text bg-gradient-to-r bg-clip-text text-transparent ${className} 
         ${tema === TEMA.dark
-                ? ' from-yellow-400 via-orange-500 to-yellow-400'
-                : ' from-sky-700 via-cyan-500 to-sky-700'
-            }`} style={{ fontSize: fontSize }}>
-            {text}
-        </HeadingTag>
+                    ? ' from-yellow-400 via-orange-500 to-yellow-400'
+                    : ' from-sky-700 via-cyan-500 to-sky-700'
+                }`} style={{ fontSize: fontSize }}>
+                {text}
+            </HeadingTag>
+        </span>
     );
 };
