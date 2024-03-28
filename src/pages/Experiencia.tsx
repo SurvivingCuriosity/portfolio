@@ -17,24 +17,24 @@ export const Experiencia = () => {
             <ol className="relative mx-auto border-s border-amber-400 xl:w-10/12 2xl:w-8/12">
                 {ExperienciasLaborales.map((exp, index) => (
                     <li key={index} className="mb-6 ms-4 xl:mb-12">
-                        <div className="absolute -start-1.5 mt-1.5 h-3 w-3 rounded-full border border-neutral-400 bg-neutral-600"></div>
+                        <div className="absolute -start-1.5 mt-1.5 h-3 w-3 rounded-full border border-neutral-400"></div>
                         <time style={{ fontSize: 'clamp(0.85rem, 2.5vw, 1.33rem)' }} className="mb-1 font-normal leading-none text-neutral-400">{getCadenaFechas(exp.fechaInicio, exp.fechaFin)}</time>
 
-                        <div style={{ padding: 'clamp(0.5rem, 2vw, 1.5rem)', gap: 'clamp(0.5rem, 2vw, 1.5rem)' }} className="flex items-center rounded-lg bg-neutral-800/50">
+                        <div style={{ padding: 'clamp(0.5rem, 2vw, 1.5rem)', gap: 'clamp(0.5rem, 2vw, 1.5rem)' }} className="dark:bg-neutral- flex items-center rounded-lg bg-neutral-100 shadow-lg">
 
-                            <img src={exp.logoEmpresa} className='size-12 rounded-xl xl:size-16 2xl:size-20' alt={`Logo ${exp.nombreEmpresa}`}></img>
+                            <img src={exp.logoEmpresa} className='size-12 rounded-xl md:size-16 2xl:size-20' alt={`Logo ${exp.nombreEmpresa}`}></img>
                             <div style={{ gap: 'clamp(0.1rem, 0.4vw, 2rem)' }} className='mb-auto flex flex-col'>
 
-                                <p style={{ fontSize: 'clamp(1rem, 2.5vw, 1.5rem)' }} className='font-bold text-neutral-200'>{exp.nombrePuesto}</p>
+                                <p style={{ fontSize: 'clamp(1rem, 2.5vw, 1.5rem)' }} className='font-bold text-neutral-600 dark:text-neutral-200'>{exp.nombrePuesto}</p>
 
                                 <FlexRow className='items-center gap-1'>
                                     <img src={company_img} className='size-5 rounded-xl' alt={`Logo ${exp.nombreEmpresa}`}></img>
-                                    <p style={{ fontSize: 'clamp(0.8em, 2.5vw, 1.25em)' }} className='text-neutral-400'>{exp.nombreEmpresa}</p>
+                                    <p style={{ fontSize: 'clamp(0.8em, 2.5vw, 1.25em)' }} className='text-neutral-600 dark:text-neutral-300'>{exp.nombreEmpresa}</p>
                                 </FlexRow>
 
                                 <FlexRow className='items-center gap-1'>
                                     <img src={location_img} className='size-5 rounded-xl' alt={`Logo ${exp.nombreEmpresa}`}></img>
-                                    <p style={{ fontSize: 'clamp(0.8em, 2.5vw, 1.25em)' }} className='text-neutral-400'>{exp.lugar}</p>
+                                    <p style={{ fontSize: 'clamp(0.8em, 2.5vw, 1.25em)' }} className='text-neutral-600 dark:text-neutral-300'>{exp.lugar}</p>
                                 </FlexRow>
                             </div>
                         </div>

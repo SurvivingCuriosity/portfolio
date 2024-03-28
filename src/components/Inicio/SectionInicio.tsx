@@ -10,7 +10,7 @@ export const SectionInicio = ({ titulo, children }: SectionInicioProps) => {
             <AnimatedGradientText
                 headingOrder='h2'
                 text={titulo}
-                fontSize='clamp(1.5em, 4dvw, 3.5em)'
+                fontSize='clamp(2em, 4dvw, 3.5em)'
             />
             {children}
         </div>

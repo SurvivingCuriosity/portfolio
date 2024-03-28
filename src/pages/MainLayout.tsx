@@ -18,7 +18,7 @@ export const MainLayout = () => {
           }
           : {
             backgroundColor: 'rgb(250, 250, 250)',
-            backgroundImage: 'linear-gradient(to right, rgb(250, 250, 250), rgb(240, 240 ,240), rgb(250, 250, 250))'
+            backgroundImage: 'linear-gradient(to right, rgb(250, 250, 250), rgb(255, 255 ,255), rgb(250, 250, 250))'
           }}
     >
       <TopNav />

@@ -17,11 +17,11 @@ export const ExperienciaInicio = () => {
                         <li
                             key={exp.fechaInicio.getTime()}
                             style={{ padding: 'clamp(0.5rem, 2vw, 1.5rem)', gap: 'clamp(0.5rem, 2vw, 1.5rem)' }}
-                            className='relative flex flex-row items-center rounded-md bg-neutral-200 p-2 text-sm text-neutral-700 shadow dark:bg-neutral-800 dark:text-neutral-300 dark:shadow-none'
+                            className='relative flex flex-row items-center rounded-md bg-neutral-100 p-2 px-4 text-sm text-neutral-700 shadow dark:bg-neutral-800 dark:text-neutral-300 dark:shadow-none'
                         >
 
                             {!exp.fechaFin &&
-                                <div className='absolute -left-1 -top-1 block -rotate-6 animate-text rounded-md bg-neutral-600 bg-gradient-to-r from-[#01BE7C] via-[#76ffd6] to-[#01BE7C] px-2 py-0.5 text-xs font-bold text-neutral-900 xl:text-base'>
+                                <div className='absolute -left-1 -top-2 block -rotate-3 animate-text rounded-md bg-neutral-600 bg-gradient-to-r from-[#01BE7C] via-[#76ffd6] to-[#01BE7C] px-2 py-0.5 text-xs font-bold text-neutral-900 xl:text-base'>
                                     Actual
                                 </div>
                             }
@@ -46,7 +46,7 @@ export const ExperienciaInicio = () => {
                 </ul>
                 <Link to='experiencia' className={`float-end p-4 text-sky-600 underline underline-offset-2 dark:text-amber-600`}>Más detalles</Link>
                 
-                <div className='mx-auto mt-14 flex justify-center'>
+                <div className='mx-auto mt-20 flex justify-center'>
                     <ButtonScrollTo
                         path='#inicio-proyectos'
                         text='Mis proyectos'
