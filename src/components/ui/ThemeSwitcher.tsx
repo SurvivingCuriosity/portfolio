@@ -1,4 +1,4 @@
-import { TEMA, useAppContext } from 'context/AppContext'
+import { TEMA, useAppContext } from '@components/Inicio/context/AppContext'
 import moon_icon from '@img/icons/moon_icon.svg'
 import sun_icon from '@img/icons/sun_icon.svg'
 

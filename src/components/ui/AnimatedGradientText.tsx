@@ -1,4 +1,4 @@
-import { TEMA, useAppContext } from "context/AppContext";
+import { TEMA, useAppContext } from "@components/Inicio/context/AppContext";
 
 interface AnimatedGradientTextProps {
     text: string;

@@ -1,4 +1,4 @@
-import { IDIOMA, useAppContext } from 'context/AppContext'
+import { IDIOMA, useAppContext } from '@components/Inicio/context/AppContext'
 import uk_icon from '@img/icons/uk_flag.svg'
 import spain_icon from '@img/icons/spain_flag.svg'
 

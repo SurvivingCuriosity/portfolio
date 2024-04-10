@@ -1,5 +1,5 @@
 import { Box, Footer, TopNav } from "@components/ui"
-import { TEMA, useAppContext } from "context/AppContext";
+import { TEMA, useAppContext } from "@components/Inicio/context/AppContext";
 import { Outlet } from "react-router-dom"
 import { ScrollRestoration } from "react-router-dom";
 
@@ -9,7 +9,7 @@ export const MainLayout = () => {
 
   return (
     <div
-      className="flex flex-col px-3"
+      className="flex flex-col"
       style={
         tema === TEMA.dark
           ? {

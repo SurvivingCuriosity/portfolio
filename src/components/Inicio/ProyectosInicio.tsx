@@ -1,13 +1,14 @@
 import { SectionInicio } from './SectionInicio'
 import './ProyectosInicio.module.css'
 import { Proyectos } from '@db/Proyectos'
+import { Link } from 'react-router-dom'
 
 export const ProyectosInicio = () => {
     return (
         <SectionInicio titulo='Proyectos'>
             <div id='proyectos-container' className='flex min-h-dvh flex-col gap-6 lg:p-4 xl:p-8'>
                 {Proyectos.map(proyecto => (
-                    <section key={proyecto.nombre} className="bg-neutral-100 md:min-h-max dark:bg-neutral-700/20">
+                    <section key={proyecto.nombre} className="relative bg-neutral-100 md:min-h-max dark:bg-neutral-700/20">
                     <div className="mx-auto grid max-w-screen-xl px-4 py-8 lg:grid-cols-12 lg:gap-8 lg:py-16 xl:gap-0">
                         <div className="mr-auto place-self-center lg:col-span-7">
                             <div className='proyectos-info-wrapper'>
@@ -29,6 +30,7 @@ export const ProyectosInicio = () => {
                             <img src={proyecto.imagen} alt="mockup"/>
                         </div>
                     </div>
+                    <Link preventScrollReset={true} to={`proyectos/${proyecto.path}`} className={`float-end p-4 text-neutral-500 underline underline-offset-2`}>Más detalles</Link>
                 </section>
                 ))}
                 

@@ -27,9 +27,9 @@ export const TopNav = () => {
     };
 
     return (
-        <div className=''>
+        <nav id='top-nav' style={{ zIndex: 1000 }} className='border-b border-neutral-400 bg-neutral-100 dark:bg-neutral-900/95'>
             <Box>
-                <div className='mx-auto flex flex-row items-center justify-between border-b border-neutral-400 py-2 text-neutral-900 dark:text-neutral-200'>
+                <div className='dark:text-neutral-20 mx-auto flex flex-row items-center justify-between py-2 text-neutral-900'>
 
                     <div className='z-20 flex gap-2'>
                         <a href='https://github.com/SurvivingCuriosity'>
@@ -70,6 +70,6 @@ export const TopNav = () => {
                     </div>
                 </div>
             </Box>
-        </div>
+        </nav>
     );
 };

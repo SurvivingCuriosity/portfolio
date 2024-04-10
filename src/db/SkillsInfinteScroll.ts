@@ -7,6 +7,7 @@ import react_img from "../assets/img/skills/react-logo.svg";
 import redux_img from "../assets/img/skills/redux-logo.svg";
 import git_img from "../assets/img/skills/git-logo.svg";
 import github_img from "../assets/img/skills/github-logo.svg";
+import cypress_img from "../assets/img/skills/cypress-logo.svg";
 
 export interface Skill {
   id: string;
@@ -97,6 +98,15 @@ export const Skills: Skill[] = [
     label: "Github",
     img: github_img,
     imgAlt: "Icono Github",
+    color: 'hsl(270, 0%, 70%)', // Morado
+    colorOscuro: 'hsl(270, 0%, 40%)', // Morado
+    fondo: 'hsla(270, 0%, 50%, 0.2)' // Morado semitransparente
+  },
+  {
+    id: "logo_cypress",
+    label: "cypress",
+    img: cypress_img,
+    imgAlt: "Icono cypress",
     color: 'hsl(270, 0%, 70%)', // Morado
     colorOscuro: 'hsl(270, 0%, 40%)', // Morado
     fondo: 'hsla(270, 0%, 50%, 0.2)' // Morado semitransparente

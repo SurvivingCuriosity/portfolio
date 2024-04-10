@@ -1,4 +1,12 @@
 /* SCROLL ANIMATION*/
+
+#top-nav {
+    animation: animate-nav linear forwards;
+    animation-timeline: view();
+    animation-range-start: 100dvh;
+    animation-range-end: 180dvh;
+}
+
 #proyectos-container section {
     animation: fade-in linear both;
     animation-timeline: view(80% 0%);
@@ -27,25 +35,25 @@ header>div {
     animation-timeline: view();
     animation-range-start: entry;
     animation-range-end: exit -200px;
-    padding-top: 12em!important; /*Para que funcione la navegacion*/
+    padding-top: 12em !important;
+    /*Para que funcione la navegacion*/
 }
 
 
 #inicio-experiencia .animated-text-wrapper,
-#inicio-proyectos .animated-text-wrapper
-{
+#inicio-proyectos .animated-text-wrapper {
     opacity: 0;
     transform-origin: left;
     animation: text-h2-in linear forwards;
     animation-timeline: view();
     animation-range-start: entry;
     animation-range-end: exit -100px;
-    
+
 }
 
 
 
-#inicio-proyectos .proyectos-img-wrapper{
+#inicio-proyectos .proyectos-img-wrapper {
     opacity: 0;
     animation: slide-in-fwd-right linear forwards;
     animation-timeline: view();
@@ -53,7 +61,7 @@ header>div {
     animation-range-end: exit -500px;
 }
 
-#inicio-proyectos .proyectos-info-wrapper{
+#inicio-proyectos .proyectos-info-wrapper {
     opacity: 0;
     animation: slide-in-fwd-left linear forwards;
     animation-timeline: view();
@@ -91,10 +99,21 @@ body {
     }
 }
 
+@keyframes animate-nav {
+    from{
+        top: -120px;
+    }
+    to {
+        position: sticky;
+        top: 0px;
+    }
+}
+
 @keyframes text-h2-in {
     0% {
         transform: translateY(-100px) scale(.8);
     }
+
     100% {
         transform: translateY(0) scale(1);
         opacity: 1;

@@ -1,7 +1,7 @@
 import { Route, RouterProvider, createBrowserRouter, createRoutesFromElements } from 'react-router-dom';
-import { Experiencia, GoBackLayout, Inicio, MainLayout, Proyectos } from './pages';
 import { useEffect } from 'react';
-import { TEMA, useAppContext } from 'context/AppContext';
+import { DetalleProyecto, Experiencia, GoBackLayout, Inicio, MainLayout, Proyectos } from './pages';
+import { TEMA, useAppContext } from '@components/Inicio/context/AppContext';
 
 export const App = () => {
 
@@ -18,7 +18,6 @@ export const App = () => {
         }
     }, [tema])
 
-
     const router = createBrowserRouter(
         createRoutesFromElements(
             <>
@@ -31,10 +30,9 @@ export const App = () => {
 
                     <Route path="/proyectos" element={<GoBackLayout />}>
                         <Route path="/proyectos" element={<Proyectos />} />
+                        <Route path="/proyectos/:idProyecto" element={<DetalleProyecto />} />
                     </Route>
                 </Route>
-
-
             </>
         )
     );
