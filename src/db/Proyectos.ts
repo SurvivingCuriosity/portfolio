@@ -4,6 +4,7 @@ import img_pokemon from "@img/proyectos/pokemon.png";
 import icono_lemonade from "@img/proyectos/icono_lemonade.svg";
 import icono_todo from "@img/proyectos/icono_todo.png";
 import icono_pokemon from "@img/proyectos/icono_pokemon.png";
+import icono_drumpads from "@img/proyectos/icono_drumpads.svg";
 import { getSkills, Skill } from "./SkillsInfinteScroll";
 
 export interface Proyecto {
@@ -33,6 +34,17 @@ export const Proyectos: Proyecto[] = [
       'Traducida al inglés con i18next.', 
       'Realizados sencillos tests E2E con Cypress'
     ]
+  },
+  {
+    nombre: "KrumDit",
+    path:'krumdit',
+    descripcionCorta: `Drumpads con una interfaz de usuario moderna y una experiencia de usuario agradable.`,
+    icono: icono_drumpads,
+    imagen: img_todo,
+    urlGithub: "https://github.com/SurvivingCuriosity/simple-todo-byFer",
+    urlProyecto: "https://krumdit.com/",
+    skills: getSkills(['react','tailwind']),
+    caracteristicas:[]
   },
   {
     nombre: "Simple TO-DO",

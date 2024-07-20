@@ -3,7 +3,7 @@ import { ContactoInicio, ExperienciaInicio, Header, ObjetivosInicio, ProyectosIn
 export const Inicio = () => {
 
     return (
-        <div>
+        <>
             <Header />
 
             <main id='inicio-main-content' className="pb-8 pt-4">
@@ -22,6 +22,6 @@ export const Inicio = () => {
             </main>
 
 
-        </div>
+        </>
     )
 }

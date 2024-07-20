@@ -1,8 +1,7 @@
+import { ButtonScrollTo } from '@components/ui/ButtonScrollTo'
 import { Heading } from './Heading'
 import { ListaAptitudes } from './ListaAptitudes'
 import { SkillsCarousel } from './SkillsCarousel'
-import { AnimatedGradientText } from '@components/ui'
-import { ButtonScrollTo } from '@components/ui/ButtonScrollTo'
 
 export const Header = () => {
 
@@ -14,14 +13,11 @@ export const Header = () => {
                 <div className="flex flex-col space-y-6 2xl:flex-row 2xl:space-x-4 2xl:space-y-0">
                     <div className="flex animate-fade-in-top flex-col justify-between 2xl:w-2/3">
                         <Heading />
-                        <p className="my-5 text-balance text-base text-neutral-900 2xl:my-0 dark:text-neutral-400">Más de 2 años de experiencia en el desarrollo de aplicaciones con <AnimatedGradientText text='React' headingOrder='span' /></p>
+                        <p className="my-5 text-balance text-xl text-neutral-900 2xl:my-0 dark:text-neutral-400">Más de 2 años de experiencia en el desarrollo de aplicaciones con React</p>
                     </div>
 
 
-
                     <ListaAptitudes />
-
-
                 </div>
 
 
@@ -29,7 +25,7 @@ export const Header = () => {
                     <SkillsCarousel />
                 </div>
 
-                <div className="mt-4 lg:mt-20">
+                <div className="mt-8 md:mt-12 lg:mt-20">
                     <ButtonScrollTo path='#inicio-experiencia' text='Experiencia laboral'/>
                 </div>
             </div>

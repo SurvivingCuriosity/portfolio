@@ -27,7 +27,7 @@ export const TopNav = () => {
     };
 
     return (
-        <nav id='top-nav' style={{ zIndex: 1000 }} className='border-b border-neutral-400 bg-neutral-100 dark:bg-neutral-900/95'>
+        <nav id='top-nav' style={{ zIndex: 1000 }} className='fixed top-0 w-full border-b border-neutral-400 bg-neutral-100 dark:bg-neutral-900/95'>
             <Box>
                 <div className='mx-auto flex flex-row items-center justify-between py-2 text-neutral-900 dark:text-neutral-200'>
 

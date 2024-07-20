@@ -25,7 +25,7 @@ html {
 }
 
 #inicio-main-content section {
-    padding: clamp(0.75em, 2vw, 1.5em);
+    padding: clamp(0.25em, 2vw, 1.5em);
     border-radius: 12px;
 }
 

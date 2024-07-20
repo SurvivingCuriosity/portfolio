@@ -1,12 +1,5 @@
 /* SCROLL ANIMATION*/
 
-#top-nav {
-    animation: animate-nav linear forwards;
-    animation-timeline: view();
-    animation-range-start: 100dvh;
-    animation-range-end: 180dvh;
-}
-
 #proyectos-container section {
     animation: fade-in linear both;
     animation-timeline: view(80% 0%);
@@ -26,7 +19,7 @@
 header>div {
     animation: fade-out linear;
     animation-timeline: view();
-    animation-range: exit -200px;
+    animation-range: exit -50px;
 }
 
 
@@ -34,11 +27,15 @@ header>div {
     animation: fade-in linear forwards;
     animation-timeline: view();
     animation-range-start: entry;
-    animation-range-end: exit -200px;
-    padding-top: 12em !important;
-    /*Para que funcione la navegacion*/
+    animation-range-end: exit -300px;
 }
 
+#inicio-experiencia {
+    scroll-margin: 12em;
+}
+#inicio-proyectos{
+    scroll-margin: 3em;
+}
 
 #inicio-experiencia .animated-text-wrapper,
 #inicio-proyectos .animated-text-wrapper {
@@ -52,36 +49,26 @@ header>div {
 }
 
 
-
-#inicio-proyectos .proyectos-img-wrapper {
+#inicio-proyectos .proyectos-img-wrapper,
+#inicio-proyectos .proyectos-info-wrapper,
+#inicio-proyectos .proyectos-link {
     opacity: 0;
-    animation: slide-in-fwd-right linear forwards;
     animation-timeline: view();
     animation-range-start: entry 50px;
     animation-range-end: exit -500px;
+}
+
+#inicio-proyectos .proyectos-img-wrapper {
+    animation: slide-in-fwd-right linear forwards;
 }
 
 #inicio-proyectos .proyectos-info-wrapper {
-    opacity: 0;
     animation: slide-in-fwd-left linear forwards;
-    animation-timeline: view();
-    animation-range-start: entry 50px;
-    animation-range-end: exit -500px;
 }
 
 #inicio-proyectos .proyectos-link {
-    opacity: 0;
     animation: fade-in linear forwards;
-    animation-timeline: view();
-    animation-range-start: entry 50px;
-    animation-range-end: exit -500px;
 }
-
-/* #inicio-objetivos{
-    animation: fade-right linear forwards;
-    animation-timeline: view();
-    animation-range: entry -50px;
-} */
 
 body {
     overflow-x: hidden;
@@ -200,3 +187,13 @@ body {
         opacity: 1;
     }
 }
+
+@media only screen and (min-width: 768px) {
+    header>div {
+        animation-range: exit -100px;
+    }
+
+    #inicio-experiencia, #inicio-objetivos {
+        animation-range-end: exit -200px;
+    }
+  }
