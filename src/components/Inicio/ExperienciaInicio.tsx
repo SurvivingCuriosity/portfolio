@@ -44,7 +44,7 @@ export const ExperienciaInicio = () => {
 
                     ))}
                 </ul>
-                <Link to='experiencia' className={`float-end p-4 text-sky-600 underline underline-offset-2 dark:text-amber-600`}>Más detalles</Link>
+                <Link to='experiencia' className={`float-end p-4 text-neutral-600 underline underline-offset-2 dark:text-amber-600`}>Más detalles</Link>
                 
                 <div className='mx-auto mt-20 flex justify-center'>
                     <ButtonScrollTo

@@ -1,50 +1,62 @@
-import { SectionInicio } from './SectionInicio'
+import { PhoneMockup } from '@components/mockups/PhoneMockup'
+import { ButtonScrollTo } from '@components/ui/ButtonScrollTo'
 import { Proyectos } from '@db/Proyectos'
 import { Link } from 'react-router-dom'
-import { ButtonScrollTo } from '@components/ui/ButtonScrollTo'
+import { SectionInicio } from './SectionInicio'
+import { LaptopMockup } from '@components/mockups/LaptopMockup'
+import { GithubIcon } from '@components/icons'
 
 export const ProyectosInicio = () => {
+
     return (
         <SectionInicio titulo='Proyectos'>
-            <div id='proyectos-container' className='flex min-h-dvh flex-col gap-6 lg:p-4 xl:p-8'>
+            <div id='proyectos-container' className='flex min-h-dvh flex-col gap-6 lg:p-4 xl:gap-12 xl:p-8 2xl:gap-32'>
                 {Proyectos.map((proyecto, index) => (
-                    <section key={proyecto.nombre} id={`proyecto-${index}`} className="relative scroll-m-44 bg-neutral-100 md:min-h-max dark:bg-neutral-700/20">
-                    <div className="mx-auto grid max-w-screen-xl px-2 py-8 lg:grid-cols-12 lg:gap-8 lg:py-16 xl:gap-0">
-                        <div className="mr-auto place-self-center lg:col-span-7">
-                            <div className='proyectos-info-wrapper'>
-                                <span className='mb-4 flex items-center gap-2'>
-                                    <h3 className="max-w-2xl text-3xl font-extrabold leading-none tracking-tight text-neutral-700 md:text-5xl xl:text-6xl dark:text-white">{proyecto.nombre}</h3>
-                                    <img src={proyecto.icono} alt="Icono del proyecto" className='size-10 xl:size-12'/>
-                                </span>
-                                <p className="mb-6 max-w-2xl font-light text-neutral-500 md:text-lg lg:mb-8 lg:text-xl dark:text-neutral-400">{proyecto.descripcionCorta}</p>
+                    <section key={proyecto.nombre} id={`proyecto-${index}`} className="proyecto-container relative scroll-m-44 bg-neutral-100 xl:min-h-[450px] dark:bg-neutral-700/20">
+                        <div className='p-2 xl:p-4 2xl:p-8'>
+                            <div className='flex flex-col xl:flex-row xl:justify-between xl:gap-8'>
+                                <div id="main-info-proyecto" className='xl: flex h-full flex-col justify-start xl:justify-between'>
+                                    <span className='flex items-center gap-2'>
+                                        <h3 className="text-4xl font-extrabold leading-none tracking-tight text-neutral-700 md:text-5xl xl:text-6xl dark:text-white">{proyecto.nombre}</h3>
+                                        <img src={proyecto.icono} alt="Icono del proyecto" className='size-6 xl:size-12' />
+                                    </span>
+
+                                    <p className="my-4 font-light text-neutral-500 md:text-lg lg:mb-8 lg:text-xl dark:text-neutral-400">{proyecto.descripcionCorta}</p>
+
+                                    <span className='my-4 flex items-center gap-2'>
+                                        <a href={proyecto.urlProyecto} target='_blank' className="proyectos-link"> <GithubIcon /> </a>
+                                        <a href={proyecto.urlProyecto} target='_blank' className="proyectos-link text-sm underline underline-offset-2 dark:text-neutral-400"> {proyecto.urlProyecto.slice(0, proyecto.urlProyecto.length - 1)} </a>
+                                    </span>
+                                </div>
+
+
+                                <div id="imagen-proyecto" className="mx-auto my-4 flex w-full items-center justify-between sm:w-11/12 xl:my-0 xl:my-8 xl:w-7/12 2xl:w-5/12">
+                                    <span className='aspect-[9/16] w-[100px] sm:w-[120px] md:w-[160px]'>
+                                        <PhoneMockup>
+                                            <img src={proyecto.imagen_movil} alt="mockup" style={{ width: '100%' }} />
+                                        </PhoneMockup>
+                                    </span>
+                                    <span className='w-[300px] sm:w-[400px] md:w-[500px]'>
+                                        <LaptopMockup>
+                                            <img src={proyecto.imagen_pc} alt="mockup" style={{ height: '100%' }} />
+                                        </LaptopMockup>
+                                    </span>
+                                </div>
                             </div>
+                            <Link preventScrollReset={true} to={`proyectos/${proyecto.path}`} className={`proyectos-link my-2 ml-auto block w-fit text-right text-neutral-800 dark:text-neutral-400`}>Más detalles</Link>
 
-                            <Link preventScrollReset={true} to={`proyectos/${proyecto.path}`} className={`block py-4 text-neutral-500 underline underline-offset-2`}>Más detalles</Link>
+                            {index !== Proyectos.length - 1 &&
+                                <div className='mx-auto mt-2 flex justify-center'>
+                                    <ButtonScrollTo
+                                        path={`#proyecto-${index + 1}`}
+                                    />
+                                </div>
+                            }
 
-                            <a href={proyecto.urlGithub} target='_blank' className="proyectos-link bg-primary-700 hover:bg-primary-800 focus:ring-primary-300 dark:focus:ring-primary-900 mr-3 inline-flex items-center justify-center rounded-lg px-5 py-3 text-center text-base font-medium text-neutral-800 focus:ring-4 dark:text-white">
-                                Github
-                                <svg className="-mr-1 ml-2 h-5 w-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
-                            </a>
-                            <a href={proyecto.urlProyecto} target='_blank' className="proyectos-link inline-flex items-center justify-center rounded-lg border border-neutral-800 px-5 py-3 text-center text-base font-medium text-neutral-800 hover:bg-neutral-100 focus:ring-4 focus:ring-neutral-100 dark:border-neutral-200 dark:text-white dark:hover:bg-neutral-800 dark:focus:ring-neutral-800">
-                                Aplicación
-                            </a>
                         </div>
-                        <div className="proyectos-img-wrapper hidden aspect-video lg:col-span-5 lg:mt-0 lg:flex">
-                            <img src={proyecto.imagen} alt="mockup"/>
-                        </div>
-                    </div>                    
-                    
-                    {index !== Proyectos.length - 1 &&
-                        <div className='mx-auto mt-12 flex justify-center'>
-                            <ButtonScrollTo
-                                path={`#proyecto-${index + 1}`}
-                            />
-                        </div>
-                    }
-                    
-                </section>
+                    </section>
                 ))}
-                
+
             </div>
         </SectionInicio>
     )

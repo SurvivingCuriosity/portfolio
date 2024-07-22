@@ -1,5 +1,6 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
+import './assets/styles/proyectos-inicio-animations.css'
 import './assets/styles/scroll-animations.css'
 import './index.css'
 import { AppContextProvider } from '@components/Inicio/context/AppContext';

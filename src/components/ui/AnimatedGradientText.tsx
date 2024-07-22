@@ -16,7 +16,7 @@ export const AnimatedGradientText = ({ text, fontSize, className, headingOrder }
             <HeadingTag className={`font-extrabold leading-snug 2xl:leading-tight animate-text bg-gradient-to-r bg-clip-text text-transparent ${className} 
         ${tema === TEMA.dark
                     ? ' from-yellow-400 via-orange-500 to-yellow-400'
-                    : ' from-sky-700 via-cyan-500 to-sky-700'
+                    : ' from-neutral-700 via-neutral-500 to-neutral-700'
                 }`} style={{ fontSize: fontSize }}>
                 {text}
             </HeadingTag>

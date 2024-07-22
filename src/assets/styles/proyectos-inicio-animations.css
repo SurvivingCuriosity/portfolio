@@ -1,0 +1,39 @@
+/*MOVIL*/
+
+.proyecto-container {
+    animation: fade-in linear both;
+    animation-timeline: view(100% 0%);
+}
+
+#main-info-proyecto {
+    animation: slide-in-fwd-left linear forwards;
+    animation-timeline: view(60% 0%);
+}
+
+#imagen-proyecto {
+    animation: slide-in-fwd-right linear forwards;
+    animation-timeline: view(80% 0%);
+}
+
+
+
+/*PC*/
+
+@media only screen and (min-width: 768px) {
+    .proyecto-container {
+        animation: fade-in linear both;
+        animation-timeline: view(90% 0%);
+    }
+    
+    #imagen-proyecto {
+    
+        animation: slide-in-fwd-right linear forwards;
+        animation-timeline: view(75% 0%);
+    }
+    
+    #main-info-proyecto {
+        animation: slide-in-fwd-left linear forwards;
+        animation-timeline: view(50% 0%);
+    }
+    
+}

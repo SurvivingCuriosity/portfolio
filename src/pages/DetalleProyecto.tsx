@@ -1,3 +1,5 @@
+import { LaptopMockup } from '@components/mockups/LaptopMockup'
+import { PhoneMockup } from '@components/mockups/PhoneMockup'
 import { Chip } from '@components/ui'
 import { Proyectos } from '@db/Proyectos'
 import { ScrollRestoration, useParams } from 'react-router-dom'
@@ -28,8 +30,17 @@ export const DetalleProyecto = () => {
                         Aplicación
                     </a> */}
                 </div>
-                <div className="proyectos-img-wrapper my-4 aspect-video lg:col-span-5 lg:mt-0 lg:flex">
-                    <img src={proyecto.imagen} alt="mockup" />
+                <div id="imagen-proyecto" className="mx-auto my-4 flex w-full items-center justify-between sm:w-11/12 xl:my-8 xl:w-7/12 2xl:w-5/12">
+                    <span className='aspect-[9/16] w-[100px] sm:w-[120px] md:w-[160px]'>
+                        <PhoneMockup>
+                            <img src={proyecto.imagen_movil} alt="mockup" style={{ width: '100%' }} />
+                        </PhoneMockup>
+                    </span>
+                    <span className='w-[300px] sm:w-[400px] md:w-[500px]'>
+                        <LaptopMockup>
+                            <img src={proyecto.imagen_pc} alt="mockup" style={{ height: '100%' }} />
+                        </LaptopMockup>
+                    </span>
                 </div>
                 <div className='mx-auto flex items-center gap-2'>
                     {proyecto.skills.map(s => (

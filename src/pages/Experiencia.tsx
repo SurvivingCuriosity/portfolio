@@ -13,10 +13,10 @@ export const Experiencia = () => {
                 className="mb-2 text-center xl:mb-10"
             />
 
-            <ol className="relative mx-auto border-s border-sky-400 xl:w-10/12 2xl:w-8/12 dark:border-amber-400">
+            <ol className="relative mx-auto border-s border-neutral-400 xl:w-10/12 2xl:w-8/12 dark:border-amber-400">
                 {ExperienciasLaborales.map((exp, index) => (
                     <li key={index} className="mb-6 ms-4 xl:mb-12">
-                        <div className="absolute -start-1.5 mt-1.5 h-3 w-3 rounded-full border border-sky-400 bg-sky-200 dark:border-amber-400 dark:bg-neutral-800"></div>
+                        <div className="absolute -start-1.5 mt-1.5 h-3 w-3 rounded-full border border-neutral-400 bg-neutral-200 dark:border-amber-400 dark:bg-neutral-800"></div>
                         <time style={{ fontSize: 'clamp(0.85rem, 2.5vw, 1.33rem)' }} className="mb-1 font-normal leading-none text-neutral-800 dark:text-neutral-200">{getCadenaFechas(exp.fechaInicio, exp.fechaFin)}</time>
 
                         <div style={{ padding: 'clamp(0.5rem, 2vw, 1.5rem)', gap: 'clamp(0.5rem, 2vw, 1.5rem)' }} className="dark:bg-neutral- flex items-center rounded-lg bg-neutral-100 shadow-lg dark:bg-neutral-800">

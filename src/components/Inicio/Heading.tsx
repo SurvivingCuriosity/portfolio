@@ -1,27 +1,20 @@
-import { SaludoIcon } from '@components/icons'
 import { TEMA, useAppContext } from './context/AppContext'
 
 export const Heading = () => {
     const { tema } = useAppContext()
     return (
-        <div id='heading'>
-            <div className="flex items-center gap-2 pt-2 text-neutral-800 dark:text-neutral-200">
-                <SaludoIcon />
-                <p style={{ fontSize: 'clamp(0.9em, 3.5dvw, 2em)' }} className="leading-5">Hola, me llamo</p>
-            </div>
+        <div id='heading' className='flex flex-col'>
+            <p className='text-xl leading-tight text-neutral-800 xl:text-2xl dark:text-neutral-400'>Hola, me llamo</p> 
             <span className='animated-text-wrapper block'>
-            <h1 className={`text-3xl md:text-6xl font-extrabold leading-normal 2xl:leading-tight animate-text bg-gradient-to-r bg-clip-text text-transparent
+                <h1 className={`pb-2 text-4xl tracking-tighter whitespace-nowrap md:text-6xl 2xl:text-7xl font-extrabold animate-text bg-gradient-to-r bg-clip-text text-transparent
         ${tema === TEMA.dark
-                    ? ' from-yellow-400 via-orange-500 to-yellow-400'
-                    : ' from-sky-700 via-cyan-500 to-sky-700'
-                }`}>
-                Fernando Rodríguez
-            </h1>
-        </span>
-            <span className="flex flex-row items-baseline gap-2 text-neutral-800 dark:text-neutral-200">
-                <p style={{ fontSize: 'clamp(1.1em, 3.5dvw, 2em)' }} className="leading-5">y soy</p>
-                <h1 style={{ fontSize: 'clamp(1.1em, 3.5dvw, 2em)' }} className="text-right font-extrabold">desarrollador Frontend</h1>
+                        ? ' from-yellow-400 via-orange-500 to-yellow-400'
+                        : ' from-neutral-700 via-neutral-500 to-neutral-700'
+                    }`}>
+                    Fernando Rodríguez
+                </h1>
             </span>
+            <h2 className="text-2xl font-extrabold leading-tight text-neutral-800 lg:text-3xl dark:text-neutral-400">Desarrollador Frontend</h2>
         </div>
     )
 }

@@ -1,27 +1,10 @@
 /* SCROLL ANIMATION*/
 
-#proyectos-container section {
-    animation: fade-in linear both;
-    animation-timeline: view(80% 0%);
-    -webkit-transform: translateX(1000px);
-    transform: translateX(1000px);
-    opacity: 0;
-}
-
-#proyectos-container section:nth-child(2n) {
-    animation: fade-in linear both;
-    animation-timeline: view(80% 0%);
-    -webkit-transform: translateX(1000px);
-    transform: translateX(1000px);
-    opacity: 0;
-}
-
 header>div {
     animation: fade-out linear;
     animation-timeline: view();
     animation-range: exit -50px;
 }
-
 
 #inicio-experiencia, #inicio-objetivos {
     animation: fade-in linear forwards;
@@ -33,13 +16,12 @@ header>div {
 #inicio-experiencia {
     scroll-margin: 12em;
 }
-#inicio-proyectos{
+
+#inicio-proyectos {
     scroll-margin: 3em;
 }
 
-#inicio-experiencia .animated-text-wrapper,
-#inicio-proyectos .animated-text-wrapper {
-    opacity: 0;
+#inicio-experiencia .animated-text-wrapper {
     transform-origin: left;
     animation: text-h2-in linear forwards;
     animation-timeline: view();
@@ -48,27 +30,6 @@ header>div {
 
 }
 
-
-#inicio-proyectos .proyectos-img-wrapper,
-#inicio-proyectos .proyectos-info-wrapper,
-#inicio-proyectos .proyectos-link {
-    opacity: 0;
-    animation-timeline: view();
-    animation-range-start: entry 50px;
-    animation-range-end: exit -500px;
-}
-
-#inicio-proyectos .proyectos-img-wrapper {
-    animation: slide-in-fwd-right linear forwards;
-}
-
-#inicio-proyectos .proyectos-info-wrapper {
-    animation: slide-in-fwd-left linear forwards;
-}
-
-#inicio-proyectos .proyectos-link {
-    animation: fade-in linear forwards;
-}
 
 body {
     overflow-x: hidden;
@@ -83,16 +44,6 @@ body {
     to {
         opacity: 0;
         transform: scale(1.25) translateY(-100px);
-    }
-}
-
-@keyframes animate-nav {
-    from{
-        top: -120px;
-    }
-    to {
-        position: sticky;
-        top: 0px;
     }
 }
 
@@ -133,28 +84,28 @@ body {
 
 @-webkit-keyframes slide-in-fwd-left {
     0% {
-        -webkit-transform: translateZ(-600px) translateX(-200px);
-        transform: translateZ(-600px) translateX(-200px);
+        -webkit-transform: translateX(-300px);
+        transform: translateX(-300px);
         opacity: 0;
     }
 
     100% {
-        -webkit-transform: translateZ(0) translateX(0);
-        transform: translateZ(0) translateX(0);
+        -webkit-transform: translateX(0);
+        transform: translateX(0);
         opacity: 1;
     }
 }
 
 @keyframes slide-in-fwd-left {
     0% {
-        -webkit-transform: translateZ(-600px) translateX(-200px);
-        transform: translateZ(-600px) translateX(-200px);
+        -webkit-transform: translateX(-300px);
+        transform: translateX(-300px);
         opacity: 0;
     }
 
     100% {
-        -webkit-transform: translateZ(0) translateX(0);
-        transform: translateZ(0) translateX(0);
+        -webkit-transform: translateX(0);
+        transform: translateX(0);
         opacity: 1;
     }
 }
@@ -162,38 +113,34 @@ body {
 
 @-webkit-keyframes slide-in-fwd-right {
     0% {
-        -webkit-transform: translateZ(-600px) translateX(200px);
-        transform: translateZ(-600px) translateX(200px);
-        opacity: 0;
+        -webkit-transform: translateX(300px);
+        transform: translateX(300px);
     }
 
     100% {
-        -webkit-transform: translateZ(0) translateX(0);
-        transform: translateZ(0) translateX(0);
-        opacity: 1;
+        -webkit-transform: translateX(0);
+        transform: translateX(0);
     }
 }
 
 @keyframes slide-in-fwd-right {
     0% {
-        -webkit-transform: translateZ(-600px) translateX(200px);
-        transform: translateZ(-600px) translateX(200px);
-        opacity: 0;
+        -webkit-transform: translateX(300px);
+        transform: translateX(300px);
     }
 
     100% {
-        -webkit-transform: translateZ(0) translateX(0);
-        transform: translateZ(0) translateX(0);
-        opacity: 1;
+        -webkit-transform: translateX(0);
+        transform: translateX(0);
     }
 }
 
 @media only screen and (min-width: 768px) {
     header>div {
-        animation-range: exit -100px;
+        animation-range: exit -50px;
     }
 
     #inicio-experiencia, #inicio-objetivos {
         animation-range-end: exit -200px;
     }
-  }
+}

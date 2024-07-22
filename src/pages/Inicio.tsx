@@ -1,4 +1,4 @@
-import { ContactoInicio, ExperienciaInicio, Header, ObjetivosInicio, ProyectosInicio } from "@components/Inicio"
+import { ExperienciaInicio, Header, ObjetivosInicio, ProyectosInicio } from "@components/Inicio"
 
 export const Inicio = () => {
 
@@ -15,9 +15,6 @@ export const Inicio = () => {
                 </section>
                 <section id='inicio-objetivos'>
                     <ObjetivosInicio />
-                </section>
-                <section id='inicio-contacto'>
-                    <ContactoInicio />
                 </section>
             </main>
 
