@@ -24,7 +24,7 @@ export const ProyectosInicio = () => {
                                     <p className="my-4 font-light text-neutral-500 md:text-lg lg:mb-8 lg:text-xl dark:text-neutral-400">{proyecto.descripcionCorta}</p>
 
                                     <span className='my-4 flex items-center gap-2'>
-                                        <a href={proyecto.urlProyecto} target='_blank' className="proyectos-link"> <GithubIcon /> </a>
+                                        <a href={proyecto.urlGithub} target='_blank' className="proyectos-link"> <GithubIcon /> </a>
                                         <a href={proyecto.urlProyecto} target='_blank' className="proyectos-link text-sm underline underline-offset-2 dark:text-neutral-400"> {proyecto.urlProyecto.slice(0, proyecto.urlProyecto.length - 1)} </a>
                                     </span>
                                 </div>
