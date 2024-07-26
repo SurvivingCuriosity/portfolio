@@ -27,7 +27,7 @@ export const TopNav = () => {
     };
 
     return (
-        <nav id='top-nav' style={{ zIndex: 1000 }} className='fixed top-0 w-full border-b border-neutral-400 bg-neutral-100 dark:bg-neutral-900/95'>
+        <nav style={{ zIndex: 1000 }} className='fixed top-0 w-full border-b border-neutral-400 bg-neutral-100 dark:bg-neutral-900/95'>
             <Box>
                 <div className='mx-auto flex flex-row items-center justify-between py-2 text-neutral-900 dark:text-neutral-200'>
 
@@ -50,7 +50,6 @@ export const TopNav = () => {
                         <li><Link className='rounded-md p-2 transition-all duration-200 hover:bg-neutral-300 dark:hover:bg-neutral-800' to='/'>Inicio</Link></li>
                         <li><Link className='rounded-md p-2 transition-all duration-200 hover:bg-neutral-300 dark:hover:bg-neutral-800' to='/proyectos'>Proyectos</Link></li>
                         <li><Link className='rounded-md p-2 transition-all duration-200 hover:bg-neutral-300 dark:hover:bg-neutral-800' to='/experiencia'>Experiencia</Link></li>
-                        <li><Link className='rounded-md p-2 transition-all duration-200 hover:bg-neutral-300 dark:hover:bg-neutral-800' to='#'>Contacto</Link></li>
                     </ul>
 
 
@@ -60,7 +59,6 @@ export const TopNav = () => {
                             <li onClick={() => { setIsOpen(false) }}><Link to='/'>Inicio</Link></li>
                             <li onClick={() => { setIsOpen(false) }}><Link to='/proyectos'>Proyectos</Link></li>
                             <li onClick={() => { setIsOpen(false) }}><Link to='/experiencia'>Experiencia</Link></li>
-                            <li onClick={() => { setIsOpen(false) }}><Link to='#'>Contacto</Link></li>
                         </ul>
 
                         <FlexRow justifyBetween className='px-7'>

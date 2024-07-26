@@ -1,4 +1,4 @@
-import { Skill, getSkills } from "@db/SkillsInfinteScroll";
+import { Skill, getSkills } from "@db/Skills";
 import nmi_img from "@img/empresas/nmi.webp";
 import xoborg_img from "@img/empresas/xoborg.webp";
 import nttdata_img from "@img/empresas/nttdata.webp";
@@ -19,7 +19,11 @@ export const ExperienciasLaborales: ExperienciaLaboral[] = [
   {
     fechaInicio: new Date(2023, 5),
     nombreEmpresa: "Xoborg Technologies SL",
-    descripcion: ["a"],
+    descripcion: [
+      `Trabajar en esta empresa de desarrollo ha sido una experiencia sumamente gratificante como frontend developer. El ambiente colaborativo y el acceso a las últimas tecnologías me han permitido crecer profesionalmente y mantenerme actualizado.`,
+      `La cultura laboral es inclusiva y flexible, lo que facilita un equilibrio saludable entre la vida personal y profesional. Además, la oportunidad de trabajar con un equipo talentoso y motivado ha hecho que cada proyecto sea emocionante y lleno de aprendizaje.`,
+      `En general, ser parte de esta empresa me ha brindado la oportunidad de mejorar continuamente mis habilidades mientras disfruto de un entorno de trabajo positivo y motivador.`
+    ],
     logoEmpresa: xoborg_img,
     lugar: "Salamanca, Castilla y León, España",
     nombrePuesto: "Desarrollador Frontend",

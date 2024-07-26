@@ -12,7 +12,7 @@ export const ProyectosInicio = () => {
         <SectionInicio titulo='Proyectos'>
             <div id='proyectos-container' className='flex min-h-dvh flex-col gap-6 lg:p-4 xl:gap-12 xl:p-8 2xl:gap-32'>
                 {Proyectos.map((proyecto, index) => (
-                    <section key={proyecto.nombre} id={`proyecto-${index}`} className="proyecto-container relative scroll-m-44 bg-neutral-100 xl:min-h-[450px] dark:bg-neutral-700/20">
+                    <section key={proyecto.nombre} id={`proyecto-${index}`} className="proyecto-container relative scroll-m-44 bg-neutral-100 shadow-lg xl:min-h-[450px] dark:bg-neutral-800/90">
                         <div className='p-2 xl:p-4 2xl:p-8'>
                             <div className='flex flex-col xl:flex-row xl:justify-between xl:gap-8'>
                                 <div id="main-info-proyecto" className='xl: flex h-full flex-col justify-start xl:justify-between'>

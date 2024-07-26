@@ -12,12 +12,12 @@ export const ExperienciaInicio = () => {
         <SectionInicio titulo='Experiencia laboral'>
             <div className='min-h-dvh'>
 
-                <ul style={{ gap: 'clamp(0.5em, 4vw, 1em)' }} className='flex flex-col'>
+                <ul className='flex flex-col gap-4'>
                     {ExperienciasLaborales.map(exp => (
                         <li
                             key={exp.fechaInicio.getTime()}
                             style={{ padding: 'clamp(0.5rem, 2vw, 1.5rem)', gap: 'clamp(0.5rem, 2vw, 1.5rem)' }}
-                            className='relative flex flex-row items-center rounded-md bg-neutral-100 p-2 px-4 text-sm text-neutral-700 shadow dark:bg-neutral-800 dark:text-neutral-300 dark:shadow-none'
+                            className='relative flex flex-row items-center rounded-md bg-neutral-100 p-4 text-sm text-neutral-700 shadow dark:bg-neutral-800 dark:text-neutral-300 dark:shadow-none'
                         >
 
                             {!exp.fechaFin &&
