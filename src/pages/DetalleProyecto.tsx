@@ -1,13 +1,15 @@
-import { useEffect } from 'react'
+import { useEffect, useMemo } from 'react'
 import { LaptopMockup } from '@components/mockups/LaptopMockup'
 import { PhoneMockup } from '@components/mockups/PhoneMockup'
 import { Chip } from '@components/ui'
 import { Proyectos } from '@db/Proyectos'
 import { Navigate, ScrollRestoration, useParams } from 'react-router-dom'
 import { GithubIcon } from '@components/icons'
+import { TEMA, useAppContext } from '@components/Inicio/context/AppContext'
 
 export const DetalleProyecto = () => {
 
+    const { tema } = useAppContext()
     const { idProyecto } = useParams()
     const proyecto = Proyectos.find(p => p.path === idProyecto)
 
@@ -15,9 +17,22 @@ export const DetalleProyecto = () => {
         window.scrollTo(0, 0)
     }, [])
 
-    if (proyecto === undefined){
+    const mappedSkills = useMemo(() => {
+        return proyecto?.skills.map(skill => (
+            {
+                ...skill,
+                color: tema === TEMA.dark ? skill.color : skill.colorOscuro
+            }
+        ))
+    }, [tema, proyecto])
+
+    if (proyecto === undefined) {
         return <Navigate to='/' replace />
     }
+
+
+
+
 
     return (
         <section key={proyecto.nombre} className="relative md:min-h-max">
@@ -59,8 +74,8 @@ export const DetalleProyecto = () => {
 
 
                 <div className='xl:w-5/12'>
-                    <div className='mx-auto my-4 flex items-center justify-start gap-2'>
-                        {proyecto.skills.map(s => (
+                    <div className='mx-auto my-4 flex w-full flex-wrap items-center justify-start gap-2'>
+                        {mappedSkills?.map(s => (
                             <Chip
                                 key={s.id}
                                 color={s.color}
@@ -73,16 +88,16 @@ export const DetalleProyecto = () => {
                     </div>
 
                     <div className='my-4 xl:my-8'>
-                        {proyecto.descripcionLarga.map(descripcion => (
-                            <p className="mb-3 text-pretty text-sm text-neutral-800 first-letter:text-xl md:text-base lg:mb-4 2xl:mb-6 dark:text-neutral-300">{descripcion}</p>
+                        {proyecto.descripcionLarga.map((descripcion, index) => (
+                            <p key={'Desc' + proyecto.nombre + index} className="mb-3 text-pretty text-sm text-neutral-800 first-letter:text-xl md:text-base lg:mb-4 2xl:mb-6 dark:text-neutral-300">{descripcion}</p>
                         ))}
                     </div>
 
                     <div className=''>
                         <p className='mb-3 text-2xl font-bold text-neutral-800 md:text-3xl dark:text-neutral-500'>Características técnicas:</p>
                         <ul className='ml-4 flex list-disc flex-col gap-4 text-neutral-800 dark:text-neutral-400'>
-                            {proyecto.caracteristicas.map(c => (
-                                <li className='text-pretty text-sm text-neutral-800 md:text-base dark:text-neutral-300'>{c}</li>
+                            {proyecto.caracteristicas.map((c, index) => (
+                                <li key={'Car' + proyecto.nombre + index} className='text-pretty text-sm text-neutral-800 md:text-base dark:text-neutral-300'>{c}</li>
                             ))}
                         </ul>
                     </div>

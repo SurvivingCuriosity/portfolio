@@ -1,7 +1,7 @@
 
-import { useEffect, useRef } from 'react';
+import { useEffect, useMemo, useRef } from 'react';
 import { Chip } from '@components/ui';
-import { Skills } from '@db/SkillsInfinteScroll';
+import { Skills } from '@db/Skills';
 import { TEMA, useAppContext } from '@components/Inicio/context/AppContext';
 
 
@@ -22,10 +22,19 @@ export const SkillsCarousel = () => {
         }
     }, []);
 
+    const mappedSkills = useMemo(()=>{
+        return Skills.map(skill => (
+            {
+                ...skill,
+                color: tema === TEMA.dark ? skill.color : skill.colorOscuro
+            }
+        ))
+    },[tema])
+
     return (
 
         <ul ref={logosRef} className="flex animate-infinite-scroll items-center justify-center md:justify-start [&_img]:max-w-none [&_li]:mx-4" >
-            {Skills.map(skill => (
+            {mappedSkills.map(skill => (
                 <li key={skill.id}>
                     <Chip
                         text={skill.label}
