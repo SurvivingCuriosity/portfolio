@@ -13,7 +13,8 @@ export const Header = () => {
                 <div className="flex flex-col space-y-6 2xl:flex-row 2xl:space-x-4 2xl:space-y-0">
                     <div className="flex animate-fade-in-top flex-col justify-between 2xl:w-2/3">
                         <Heading />
-                        <p className="my-5 text-balance text-base text-neutral-900 md:text-lg lg:text-xl 2xl:my-0 dark:text-neutral-400">Más de 2 años de experiencia en el desarrollo de aplicaciones con React</p>
+                        <p className="my-5 text-balance text-base text-neutral-900 md:text-lg lg:text-xl 2xl:my-0 dark:text-neutral-400">Over 2 years of experience in developing applications with React</p>
+
                     </div>
 
 
@@ -26,7 +27,7 @@ export const Header = () => {
                 </div>
 
                 <div className="mt-8 md:mt-12 lg:mt-20">
-                    <ButtonScrollTo path='#inicio-experiencia' text='Experiencia laboral'/>
+                    <ButtonScrollTo path='#inicio-experiencia' text='Work experience'/>
                 </div>
             </div>
 

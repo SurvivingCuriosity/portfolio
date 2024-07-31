@@ -9,10 +9,10 @@ import { GithubIcon } from '@components/icons'
 export const ProyectosInicio = () => {
 
     return (
-        <SectionInicio titulo='Proyectos'>
+        <SectionInicio titulo='Projects'>
             <div id='proyectos-container' className='flex min-h-dvh flex-col gap-6 lg:p-4 xl:gap-12 xl:p-8 2xl:gap-32'>
                 {Proyectos.map((proyecto, index) => (
-                    <section key={proyecto.nombre} id={`proyecto-${index}`} className="proyecto-container relative scroll-m-44 bg-neutral-100 shadow-lg xl:min-h-[450px] dark:bg-neutral-800/90">
+                    <section key={proyecto.nombre} id={`proyecto-${index}`} className="proyecto-container relative scroll-m-44 bg-neutral-100/70 shadow-lg xl:min-h-[450px] dark:bg-neutral-900/70">
                         <div className='p-2 xl:p-4 2xl:p-8'>
                             <div className='flex flex-col xl:flex-row xl:justify-between xl:gap-8'>
                                 <div id="main-info-proyecto" className='xl: flex h-full flex-col justify-start xl:justify-between'>
@@ -30,7 +30,7 @@ export const ProyectosInicio = () => {
                                 </div>
 
 
-                                <div id="imagen-proyecto" className="mx-auto my-4 flex w-full items-center justify-between sm:w-11/12 xl:my-0 xl:my-8 xl:w-7/12 2xl:w-5/12">
+                                <div id="imagen-proyecto" className="mx-auto my-4 flex w-full items-center justify-between sm:w-11/12 xl:my-8 xl:w-7/12 2xl:w-5/12">
                                     <span className='aspect-[9/16] w-[100px] sm:w-[120px] md:w-[160px]'>
                                         <PhoneMockup>
                                             <img src={proyecto.imagen_movil} alt="mockup" style={{ width: '100%' }} />
@@ -43,7 +43,7 @@ export const ProyectosInicio = () => {
                                     </span>
                                 </div>
                             </div>
-                            <Link preventScrollReset={true} to={`proyectos/${proyecto.path}`} className={`proyectos-link my-2 ml-auto block w-fit text-right text-neutral-800 dark:text-neutral-400`}>Más detalles</Link>
+                            <Link preventScrollReset={true} to={`proyectos/${proyecto.path}`} className={`proyectos-link my-2 ml-auto block w-fit text-right text-neutral-800 underline-offset-2 hover:underline dark:text-neutral-400`}>More details</Link>
 
                             {index !== Proyectos.length - 1 &&
                                 <div className='mx-auto mt-2 flex justify-center'>

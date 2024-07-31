@@ -20,13 +20,13 @@ export const ExperienciasLaborales: ExperienciaLaboral[] = [
     fechaInicio: new Date(2023, 5),
     nombreEmpresa: "Xoborg Technologies SL",
     descripcion: [
-      `Trabajar en esta empresa de desarrollo ha sido una experiencia sumamente gratificante como frontend developer. El ambiente colaborativo y el acceso a las últimas tecnologías me han permitido crecer profesionalmente y mantenerme actualizado.`,
-      `La cultura laboral es inclusiva y flexible, lo que facilita un equilibrio saludable entre la vida personal y profesional. Además, la oportunidad de trabajar con un equipo talentoso y motivado ha hecho que cada proyecto sea emocionante y lleno de aprendizaje.`,
-      `En general, ser parte de esta empresa me ha brindado la oportunidad de mejorar continuamente mis habilidades mientras disfruto de un entorno de trabajo positivo y motivador.`
+      `Working at this development company has been an extremely rewarding experience as a frontend developer. The collaborative environment and access to the latest technologies have allowed me to grow professionally and stay updated.`,
+      `The work culture is inclusive and flexible, facilitating a healthy balance between personal and professional life. Additionally, the opportunity to work with a talented and motivated team has made every project exciting and full of learning.`,
+      `Overall, being part of this company has given me the opportunity to continuously improve my skills while enjoying a positive and motivating work environment.`
     ],
     logoEmpresa: xoborg_img,
-    lugar: "Salamanca, Castilla y León, España",
-    nombrePuesto: "Desarrollador Frontend",
+    lugar: "Salamanca, Castilla y León, Spain",
+    nombrePuesto: "Frontend Developer",
     aptitudes: getSkills(["react", "redux", "electron", "storybook"]),
   },
   {
@@ -35,7 +35,7 @@ export const ExperienciasLaborales: ExperienciaLaboral[] = [
     nombreEmpresa: "NTT Data Europe & Latam",
     descripcion: ["a"],
     logoEmpresa: nttdata_img,
-    lugar: "Salamanca, Castilla y León, España",
+    lugar: "Salamanca, Castilla y León, Spain",
     nombrePuesto: "Junior QA Tester",
     remote: true,
     aptitudes: [],
@@ -46,7 +46,7 @@ export const ExperienciasLaborales: ExperienciaLaboral[] = [
     nombreEmpresa: "NMI ERP",
     descripcion: ["a"],
     logoEmpresa: nmi_img,
-    lugar: "Rzeszow, Subcarpatia, Polonia",
+    lugar: "Rzeszow, Subcarpatia, Poland",
     nombrePuesto: "Intern",
     aptitudes: [],
   },
@@ -54,18 +54,18 @@ export const ExperienciasLaborales: ExperienciaLaboral[] = [
 
 export const getCadenaFechas = (fInicio: Date, fFin?: Date): string => {
   const meses = [
-    "Enero",
-    "Febrero",
-    "Marzo",
-    "Abril",
-    "Mayo",
-    "Junio",
-    "Julio",
-    "Agosto",
-    "Septiembre",
-    "Octubre",
-    "Noviembre",
-    "Diciembre",
+    "January",
+    "February",
+    "March",
+    "April",
+    "May",
+    "June",
+    "July",
+    "August",
+    "September",
+    "October",
+    "November",
+    "December",
   ];
 
   const getFormattedDate = (date: Date): string => {
@@ -73,7 +73,7 @@ export const getCadenaFechas = (fInicio: Date, fFin?: Date): string => {
   };
 
   const fechaInicioStr = getFormattedDate(fInicio);
-  const fechaFinStr = fFin ? getFormattedDate(fFin) : "Actualidad";
+  const fechaFinStr = fFin ? getFormattedDate(fFin) : "Present";
 
   const diffYears =
     (fFin ? fFin.getFullYear() : new Date().getFullYear()) -
@@ -83,20 +83,20 @@ export const getCadenaFechas = (fInicio: Date, fFin?: Date): string => {
   const totalMonths = diffYears * 12 + diffMonths;
 
   if (totalMonths < 12) {
-    return `${fechaInicioStr} - ${fechaFinStr} (${totalMonths} mes${
-      totalMonths !== 1 ? "es" : ""
+    return `${fechaInicioStr} - ${fechaFinStr} (${totalMonths} month${
+      totalMonths !== 1 ? "s" : ""
     })`;
   } else {
     const years = Math.floor(totalMonths / 12);
     const remainingMonths = totalMonths % 12;
     if (remainingMonths === 0) {
-      return `${fechaInicioStr} - ${fechaFinStr} (${years} año${
+      return `${fechaInicioStr} - ${fechaFinStr} (${years} year${
         years !== 1 ? "s" : ""
       })`;
     } else {
-      return `${fechaInicioStr} - ${fechaFinStr} (${years} año${
+      return `${fechaInicioStr} - ${fechaFinStr} (${years} year${
         years !== 1 ? "s" : ""
-      } y ${remainingMonths} mes${remainingMonths !== 1 ? "es" : ""})`;
+      } and ${remainingMonths} month${remainingMonths !== 1 ? "s" : ""})`;
     }
   }
 };

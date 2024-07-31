@@ -7,7 +7,7 @@ export const Experiencia = () => {
     return (
         <>
             <AnimatedGradientText
-                text="Experiencia laboral"
+                text="Work experience"
                 headingOrder="h1"
                 fontSize="clamp(2rem, 2.5vw, 3rem)"
                 className="mb-2 whitespace-nowrap text-center tracking-tighter xl:mb-10"

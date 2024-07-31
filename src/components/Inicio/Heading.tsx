@@ -4,7 +4,7 @@ export const Heading = () => {
     const { tema } = useAppContext()
     return (
         <div id='heading' className='flex flex-col'>
-            <p className='text-xl leading-tight text-neutral-800 xl:text-2xl dark:text-neutral-400'>Hola, me llamo</p> 
+            <p className='text-xl leading-tight text-neutral-800 xl:text-2xl dark:text-neutral-400'>Hi there! My name is</p> 
             <span className='animated-text-wrapper block'>
                 <h1 className={`pb-2 text-4xl tracking-tighter whitespace-nowrap md:text-6xl 2xl:text-7xl font-extrabold animate-text bg-gradient-to-r bg-clip-text text-transparent
         ${tema === TEMA.dark
@@ -14,7 +14,7 @@ export const Heading = () => {
                     Fernando Rodríguez
                 </h1>
             </span>
-            <h2 className="text-2xl font-extrabold leading-tight text-neutral-800 lg:text-3xl dark:text-neutral-400">Desarrollador Frontend</h2>
+            <h2 className="text-2xl font-extrabold leading-tight text-neutral-800 lg:text-3xl dark:text-neutral-400">Frontend Developer</h2>
         </div>
     )
 }

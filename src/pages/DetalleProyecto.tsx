@@ -94,7 +94,7 @@ export const DetalleProyecto = () => {
                     </div>
 
                     <div className=''>
-                        <p className='mb-3 text-2xl font-bold text-neutral-800 md:text-3xl dark:text-neutral-500'>Características técnicas:</p>
+                        <p className='mb-3 text-2xl font-bold text-neutral-800 md:text-3xl dark:text-neutral-500'>Technical Specifications:</p>
                         <ul className='ml-4 flex list-disc flex-col gap-4 text-neutral-800 dark:text-neutral-400'>
                             {proyecto.caracteristicas.map((c, index) => (
                                 <li key={'Car' + proyecto.nombre + index} className='text-pretty text-sm text-neutral-800 md:text-base dark:text-neutral-300'>{c}</li>

@@ -9,7 +9,7 @@ import { ButtonScrollTo } from '@components/ui/ButtonScrollTo'
 
 export const ExperienciaInicio = () => {
     return (
-        <SectionInicio titulo='Experiencia laboral'>
+        <SectionInicio titulo='Work experience'>
             <div className='min-h-dvh'>
 
                 <ul className='flex flex-col gap-4'>
@@ -22,7 +22,7 @@ export const ExperienciaInicio = () => {
 
                             {!exp.fechaFin &&
                                 <div className='absolute -left-1 -top-2 block -rotate-3 animate-text rounded-md bg-neutral-600 bg-gradient-to-r from-[#01BE7C] via-[#76ffd6] to-[#01BE7C] px-2 py-0.5 text-xs font-bold text-neutral-900 xl:text-base'>
-                                    Actual
+                                    Present
                                 </div>
                             }
                             <img src={exp.logoEmpresa} className='size-12 rounded-xl xl:size-16 2xl:size-20' alt={`Logo ${exp.nombreEmpresa}`}></img>
@@ -44,12 +44,12 @@ export const ExperienciaInicio = () => {
 
                     ))}
                 </ul>
-                <Link to='experiencia' className={`float-end p-4 text-neutral-600 underline underline-offset-2 dark:text-amber-600`}>Más detalles</Link>
+                <Link to='experiencia' className={`float-end p-4 text-neutral-600 underline-offset-2 hover:underline dark:text-amber-600`}>More details</Link>
                 
                 <div className='mx-auto mt-20 flex justify-center'>
                     <ButtonScrollTo
                         path='#inicio-proyectos'
-                        text='Mis proyectos'
+                        text='My projects'
                     />
                 </div>
             </div>
