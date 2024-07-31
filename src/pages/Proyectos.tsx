@@ -13,11 +13,11 @@ export const Proyectos = () => {
                 fontSize="clamp(2.5rem, 2.5vw, 4rem)"
                 className="mb-2 whitespace-nowrap text-center tracking-tighter xl:mb-10"
             />
-            <ol className="mx-auto grid grid-cols-1 justify-items-center gap-4 border-neutral-400 lg:grid-cols-2 xl:w-10/12 xl:gap-8 2xl:w-8/12 2xl:grid-cols-3">
+            <ol className="mx-auto grid grid-cols-1 justify-items-center gap-4 border-neutral-400 md:grid-cols-2 xl:grid-cols-3 xl:gap-8">
                 {ListaProyectos.map((proyecto) => (
 
 
-                    <div key={proyecto.path} onClick={() => navigate(`/proyectos/${proyecto.path}`)} className="relative max-w-lg origin-center cursor-pointer rounded-lg border border-neutral-200 bg-white shadow duration-200 hover:scale-105 dark:border-neutral-700 dark:bg-neutral-800">
+                    <div key={proyecto.path} onClick={() => navigate(`/proyectos/${proyecto.path}`)} className="relative w-full origin-center cursor-pointer rounded-lg border border-neutral-200 bg-white shadow duration-200 hover:scale-105 dark:border-neutral-700 dark:bg-neutral-800">
 
                         <img className="rounded-t-lg" src={proyecto.imagen_pc} alt="Imagen proyecto" />
                         <div className="p-5">

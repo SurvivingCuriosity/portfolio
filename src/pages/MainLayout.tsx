@@ -1,7 +1,8 @@
 import { Box, Footer, TopNav } from "@components/ui"
-import { TEMA, useAppContext } from "@components/Inicio/context/AppContext";
+import { TEMA } from "@components/Inicio/context/AppContext";
 import { Outlet } from "react-router-dom"
 import { ScrollRestoration } from "react-router-dom";
+import { useAppContext } from "@components/Inicio/context/useAppContext";
 
 export const MainLayout = () => {
 

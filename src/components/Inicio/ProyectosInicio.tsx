@@ -18,7 +18,7 @@ export const ProyectosInicio = () => {
                                 <div id="main-info-proyecto" className='xl: flex h-full flex-col justify-start xl:justify-between'>
                                     <span className='flex items-center gap-2'>
                                         <h3 className="text-4xl font-extrabold leading-none tracking-tight text-neutral-700 md:text-5xl xl:text-6xl dark:text-white">{proyecto.nombre}</h3>
-                                        <img src={proyecto.icono} alt="Icono del proyecto" className='size-6 xl:size-12' />
+                                        <img loading='lazy' src={proyecto.icono} alt="Icono del proyecto" className='size-6 xl:size-12' />
                                     </span>
 
                                     <p className="my-4 font-light text-neutral-500 md:text-lg lg:mb-8 lg:text-xl dark:text-neutral-400">{proyecto.descripcionCorta}</p>
@@ -33,12 +33,12 @@ export const ProyectosInicio = () => {
                                 <div id="imagen-proyecto" className="mx-auto my-4 flex w-full items-center justify-between sm:w-11/12 xl:my-8 xl:w-7/12 2xl:w-5/12">
                                     <span className='aspect-[9/16] w-[100px] sm:w-[120px] md:w-[160px]'>
                                         <PhoneMockup>
-                                            <img src={proyecto.imagen_movil} alt="mockup" style={{ width: '100%' }} />
+                                            <img loading='lazy' src={proyecto.imagen_movil} alt="mockup" style={{ width: '100%' }} />
                                         </PhoneMockup>
                                     </span>
                                     <span className='w-[300px] sm:w-[400px] md:w-[500px]'>
                                         <LaptopMockup>
-                                            <img src={proyecto.imagen_pc} alt="mockup" style={{ height: '100%' }} />
+                                            <img loading='lazy' src={proyecto.imagen_pc} alt="mockup" style={{ height: '100%' }} />
                                         </LaptopMockup>
                                     </span>
                                 </div>

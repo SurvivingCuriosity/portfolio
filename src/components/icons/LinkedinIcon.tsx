@@ -1,4 +1,5 @@
-import { TEMA, useAppContext } from "@components/Inicio/context/AppContext"
+import { TEMA } from "@components/Inicio/context/AppContext"
+import { useAppContext } from "@components/Inicio/context/useAppContext"
 
 
 export const LinkedinIcon = () => {

@@ -1,4 +1,5 @@
 import html_img from "../assets/img/skills/html-logo.svg";
+import cucumber_img from "../assets/img/skills/cucumber.webp";
 import css_img from "../assets/img/skills/css-logo.svg";
 import tailwind_img from "../assets/img/skills/tailwind-logo.svg";
 import js_img from "../assets/img/skills/javascript-logo.svg";
@@ -8,6 +9,7 @@ import redux_img from "../assets/img/skills/redux-logo.svg";
 import git_img from "../assets/img/skills/git-logo.svg";
 import github_img from "../assets/img/skills/github-logo.svg";
 import cypress_img from "../assets/img/skills/cypress-logo.svg";
+import storybook_img from "../assets/img/skills/storybook-logo.webp";
 
 export interface Skill {
   id: string;
@@ -133,6 +135,44 @@ const AllSkills: Skill[] = [
     color: DEFAULT_COLOR,
     colorOscuro: DEFAULT_COLOR_OSCURO,
     fondo: DEFAULT_FONDO,
+  },
+  {
+    id: "Microsoft Power Platform",
+    label: "Microsoft Power Platform",
+    color: DEFAULT_COLOR,
+    colorOscuro: DEFAULT_COLOR_OSCURO,
+    fondo: DEFAULT_FONDO,
+  },
+  {
+    id: "Gherkin",
+    label: "Gherkin",
+    color: DEFAULT_COLOR,
+    colorOscuro: DEFAULT_COLOR_OSCURO,
+    fondo: DEFAULT_FONDO,
+  },
+  {
+    id: "Selenium",
+    label: "Selenium",
+    color: DEFAULT_COLOR,
+    colorOscuro: DEFAULT_COLOR_OSCURO,
+    fondo: DEFAULT_FONDO,
+  },{
+    id: "Cucumber",
+    label: "Cucumber",
+    img: cucumber_img,
+    imgAlt: "Icono Cucumber",
+    color: "hsl(140, 100%, 60%)",
+    colorOscuro: "hsl(140, 100%, 30%)",
+    fondo: "hsla(140, 100%, 50%, 0.2)",
+  },
+  {
+    id: "Storybook",
+    label: "Storybook",
+    img: storybook_img,
+    imgAlt: "Icono Storybook",
+    color: "hsl(330, 100%, 60%)",
+    colorOscuro: "hsl(330, 100%, 30%)",
+    fondo: "hsla(330, 100%, 50%, 0.2)",
   },
 ];
 

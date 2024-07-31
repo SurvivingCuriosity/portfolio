@@ -20,9 +20,8 @@ export const ExperienciasLaborales: ExperienciaLaboral[] = [
     fechaInicio: new Date(2023, 5),
     nombreEmpresa: "Xoborg Technologies SL",
     descripcion: [
-      `Working at this development company has been an extremely rewarding experience as a frontend developer. The collaborative environment and access to the latest technologies have allowed me to grow professionally and stay updated.`,
-      `The work culture is inclusive and flexible, facilitating a healthy balance between personal and professional life. Additionally, the opportunity to work with a talented and motivated team has made every project exciting and full of learning.`,
-      `Overall, being part of this company has given me the opportunity to continuously improve my skills while enjoying a positive and motivating work environment.`
+      `Participo en el desarrollo de un software de gestión de clínicas, para el que utilizamos el stack: React, Redux, Electron y Storybook y Talwind para el estilo.`,
+      `Mantenemos una comunicación constante con el equipo de backend, buscando la mejor solución para cada caso de uso y dificultades que surgen.`
     ],
     logoEmpresa: xoborg_img,
     lugar: "Salamanca, Castilla y León, Spain",
@@ -33,22 +32,30 @@ export const ExperienciasLaborales: ExperienciaLaboral[] = [
     fechaInicio: new Date(2022, 9),
     fechaFin: new Date(2023, 5),
     nombreEmpresa: "NTT Data Europe & Latam",
-    descripcion: ["a"],
+    descripcion: [
+      `Durante mi etapa en esta empresa, colaboré con el equipo de QA diseñando, perfilando y ejecutando casos de prueba para un proyecto público de alcance e impacto nacional.` , 
+      `Esta experiencia me permitió comprender la necesidad de un software sólidamente testeado para evitar que el cliente sufra ningún comportamiento de la aplicación no deseado.`,
+      `Aprendí los conceptos básicos de TDD, BDD y cómo aplicarlos en el contexto de un proyecto de software utilizando Selenium, el lenguaje Gherkin y Cucumber.` 
+    ],
     logoEmpresa: nttdata_img,
     lugar: "Salamanca, Castilla y León, Spain",
     nombrePuesto: "Junior QA Tester",
     remote: true,
-    aptitudes: [],
+    aptitudes: getSkills(["Cucumber", "Javascript", "Gherkin", "Selenium"]),
   },
   {
     fechaInicio: new Date(2023, 2),
     fechaFin: new Date(2023, 5),
     nombreEmpresa: "NMI ERP",
-    descripcion: ["a"],
+    descripcion: [
+      `Realicé mis prácticas del grado en NMI ERP, una empresa Polaca que ofrece soluciones de gestión para todo tipo de empresas haciendo uso de Miscrsoft Power Platform.`,
+      `Pude realizar cursos de formación básica en Power BI y Power Apps.`,
+      `Fue mi primera experiencia laboral y pude disfrutar de un ambiente de trabajo excelente junto a personas muy comprometidas con la inclusión de "novatos" como yo con las que me comunicaba en inglés.`
+    ],
     logoEmpresa: nmi_img,
     lugar: "Rzeszow, Subcarpatia, Poland",
     nombrePuesto: "Intern",
-    aptitudes: [],
+    aptitudes: getSkills(["Microsoft Power Platform"]),
   },
 ];
 

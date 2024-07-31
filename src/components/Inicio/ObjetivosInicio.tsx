@@ -18,7 +18,7 @@ export const ObjetivosInicio = () => {
                 <section className="proyecto-container flex scroll-m-44 flex-col gap-8 bg-neutral-100 xl:min-h-[450px] dark:bg-neutral-700/20">
                     {objetivos.map((objetivo) => (
                         <span  className='flex flex-row gap-4' key={objetivo.id}>
-                            <input aria-disabled="true"
+                            <input aria-disabled="true" readOnly
                             aria-label="Future goal 1 (visual only)" type="checkbox" className="scale-[200%] accent-lime-500" checked={objetivo.checked} />
                             <p className='text-2xl font-bold text-neutral-800'>{objetivo.text}</p>
                         </span>

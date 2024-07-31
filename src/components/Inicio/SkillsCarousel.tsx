@@ -2,7 +2,8 @@
 import { useEffect, useMemo, useRef } from 'react';
 import { Chip } from '@components/ui';
 import { Skills } from '@db/Skills';
-import { TEMA, useAppContext } from '@components/Inicio/context/AppContext';
+import { TEMA } from '@components/Inicio/context/AppContext';
+import { useAppContext } from './context/useAppContext';
 
 
 export const SkillsCarousel = () => {

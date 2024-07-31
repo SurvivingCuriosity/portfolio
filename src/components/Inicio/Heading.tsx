@@ -1,4 +1,5 @@
-import { TEMA, useAppContext } from './context/AppContext'
+import { TEMA } from './context/AppContext'
+import { useAppContext } from './context/useAppContext'
 
 export const Heading = () => {
     const { tema } = useAppContext()

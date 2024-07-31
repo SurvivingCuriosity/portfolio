@@ -5,7 +5,8 @@ import { Chip } from '@components/ui'
 import { Proyectos } from '@db/Proyectos'
 import { Navigate, ScrollRestoration, useParams } from 'react-router-dom'
 import { GithubIcon } from '@components/icons'
-import { TEMA, useAppContext } from '@components/Inicio/context/AppContext'
+import { TEMA } from '@components/Inicio/context/AppContext'
+import { useAppContext } from '@components/Inicio/context/useAppContext'
 
 export const DetalleProyecto = () => {
 

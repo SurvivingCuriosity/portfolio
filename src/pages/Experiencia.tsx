@@ -1,9 +1,15 @@
-import { AnimatedGradientText, FlexRow } from "@components/ui";
+import { TEMA } from "@components/Inicio/context/AppContext";
+import { useAppContext } from "@components/Inicio/context/useAppContext";
+import { AnimatedGradientText, Chip, FlexRow } from "@components/ui";
 import { ExperienciasLaborales, getCadenaFechas } from "@db/ExperienciasLaborales";
-import company_img from '@img/icons/company_logo.svg'
-import location_img from '@img/icons/location_logo.svg'
+import company_img from '@img/icons/company_logo.svg';
+import location_img from '@img/icons/location_logo.svg';
 
 export const Experiencia = () => {
+
+    const { tema } = useAppContext()
+    
+
     return (
         <>
             <AnimatedGradientText
@@ -38,6 +44,21 @@ export const Experiencia = () => {
                                     </FlexRow>
                                 </div>
                             </div>
+
+
+                            <div className='mx-auto my-4 flex w-full flex-wrap items-center justify-start gap-2'>
+                                {exp.aptitudes?.map(s => (
+                                    <Chip
+                                        key={s.id}
+                                        color={tema === TEMA.dark ? s.color : s.colorOscuro}
+                                        fondo={s.fondo}
+                                        text={s.label}
+                                        img={s.img}
+                                        imgAlt={s.imgAlt}
+                                    />
+                                ))}
+                            </div>
+
 
                             <ul className="flex flex-col gap-4 text-neutral-800 dark:text-neutral-400">
                                 {exp.descripcion.map((descripcion, index) => (

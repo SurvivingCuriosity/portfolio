@@ -1,7 +1,8 @@
 import { Route, RouterProvider, createBrowserRouter, createRoutesFromElements } from 'react-router-dom';
 import { useEffect } from 'react';
 import { DetalleProyecto, Experiencia, GoBackLayout, Inicio, MainLayout, Proyectos } from './pages';
-import { TEMA, useAppContext } from '@components/Inicio/context/AppContext';
+import { TEMA } from '@components/Inicio/context/AppContext';
+import { useAppContext } from '@components/Inicio/context/useAppContext';
 
 export const App = () => {
 
