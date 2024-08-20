@@ -8,7 +8,7 @@ export const ThemeSwitcher = () => {
     const { tema, toggleTema } = useAppContext()
 
     return (
-        <button onClick={() => { toggleTema() }} className='flex w-fit items-center gap-4 rounded-lg p-1 px-3 text-sm transition-colors duration-200 hover:bg-neutral-800/40'>
+        <button onClick={() => { toggleTema() }} className='flex aspect-square w-fit items-center gap-4 rounded-lg border border-neutral-700 p-2 text-sm transition-colors duration-200 hover:bg-neutral-800/40 dark:border-neutral-300'>
 
             {tema === TEMA.light
                 ?
