@@ -20,8 +20,8 @@ export const ExperienciasLaborales: ExperienciaLaboral[] = [
     fechaInicio: new Date(2023, 5),
     nombreEmpresa: "Xoborg Technologies SL",
     descripcion: [
-      `Participo en el desarrollo de un software de gestión de clínicas, para el que utilizamos el stack: React, Redux, Electron y Storybook y Talwind para el estilo.`,
-      `Mantenemos una comunicación constante con el equipo de backend, buscando la mejor solución para cada caso de uso y dificultades que surgen.`
+      "I participate in the development of clinic management software, where we use the following stack: React, Redux, Electron, Storybook, and Tailwind for styling.",
+      "We maintain constant communication with the backend team, seeking the best solution for each use case and any challenges that arise."
     ],
     logoEmpresa: xoborg_img,
     lugar: "Salamanca, Castilla y León, Spain",
@@ -33,9 +33,9 @@ export const ExperienciasLaborales: ExperienciaLaboral[] = [
     fechaFin: new Date(2023, 5),
     nombreEmpresa: "NTT Data Europe & Latam",
     descripcion: [
-      `Durante mi etapa en esta empresa, colaboré con el equipo de QA diseñando, perfilando y ejecutando casos de prueba para un proyecto público de alcance e impacto nacional.` , 
-      `Esta experiencia me permitió comprender la necesidad de un software sólidamente testeado para evitar que el cliente sufra ningún comportamiento de la aplicación no deseado.`,
-      `Aprendí los conceptos básicos de TDD, BDD y cómo aplicarlos en el contexto de un proyecto de software utilizando Selenium, el lenguaje Gherkin y Cucumber.` 
+      "During my time at this company, I collaborated with the QA team in designing, profiling, and executing test cases for a public project with national reach and impact.",
+      "This experience allowed me to understand the need for thoroughly tested software to prevent any unwanted application behavior from affecting the client.",
+      "I learned the basics of TDD, BDD, and how to apply them in the context of a software project using Selenium, the Gherkin language, and Cucumber."
     ],
     logoEmpresa: nttdata_img,
     lugar: "Salamanca, Castilla y León, Spain",
@@ -48,9 +48,9 @@ export const ExperienciasLaborales: ExperienciaLaboral[] = [
     fechaFin: new Date(2023, 5),
     nombreEmpresa: "NMI ERP",
     descripcion: [
-      `Realicé mis prácticas del grado en NMI ERP, una empresa Polaca que ofrece soluciones de gestión para todo tipo de empresas haciendo uso de Miscrsoft Power Platform.`,
-      `Pude realizar cursos de formación básica en Power BI y Power Apps.`,
-      `Fue mi primera experiencia laboral y pude disfrutar de un ambiente de trabajo excelente junto a personas muy comprometidas con la inclusión de "novatos" como yo con las que me comunicaba en inglés.`
+      "I completed my degree internship at NMI ERP, a Polish company that offers management solutions for all types of businesses using Microsoft Power Platform.",
+      "I was able to take basic training courses in Power BI and Power Apps.",
+      "This was my first work experience, and I enjoyed an excellent work environment with people who were highly committed to including 'newbies' like me, with whom I communicated in English."
     ],
     logoEmpresa: nmi_img,
     lugar: "Rzeszow, Subcarpatia, Poland",
