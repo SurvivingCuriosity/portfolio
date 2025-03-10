@@ -13,7 +13,7 @@ export const Header = () => {
                 <div className="flex flex-col space-y-6 2xl:flex-row 2xl:space-x-4 2xl:space-y-0">
                     <div className="flex animate-fade-in-top flex-col justify-between 2xl:w-2/3">
                         <Heading />
-                        <p className="my-5 text-balance text-base text-neutral-900 md:text-lg lg:text-xl 2xl:my-0 dark:text-neutral-400">Over 2 years of experience in developing applications with React</p>
+                        <p className="my-5 text-balance text-base text-neutral-900 md:text-lg lg:text-xl 2xl:my-0 dark:text-neutral-400">4 years of experience in developing applications with React</p>
 
                     </div>
 
