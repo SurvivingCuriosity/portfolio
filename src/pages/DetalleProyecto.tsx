@@ -38,7 +38,7 @@ export const DetalleProyecto = () => {
     return (
         <section key={proyecto.nombre} className="relative md:min-h-max">
 
-            <img src={proyecto.icono} alt="Icono del proyecto" id="imagen-fondo-detalle-proyecto" className='pointer-events-none fixed -right-[120px] -top-10 z-0 size-[400px] rotate-45 opacity-10 blur-[6px] xl:left-[120px] xl:size-[600px]' />
+            <img src={proyecto.icono} alt="Icono del proyecto" id="imagen-fondo-detalle-proyecto" className='pointer-events-none fixed -right-[120px] -top-10 z-0 size-[400px] rotate-12 opacity-10 xl:left-[120px] xl:size-[600px]' />
 
             <div className="mb-2">
                 <span className='flex items-center gap-2'>

@@ -10,6 +10,8 @@ import git_img from "../assets/img/skills/git-logo.svg";
 import github_img from "../assets/img/skills/github-logo.svg";
 import cypress_img from "../assets/img/skills/cypress-logo.svg";
 import storybook_img from "../assets/img/skills/storybook-logo.webp";
+import nextjs_img from "../assets/img/skills/nextjs-logo.svg";
+import mongodb_img from "../assets/img/skills/mongodb-logo.svg";
 
 export interface Skill {
   id: string;
@@ -111,6 +113,24 @@ export const Skills: Skill[] = [
     color: "hsl(270, 0%, 70%)",
     colorOscuro: "hsl(270, 0%, 40%)",
     fondo: "hsla(270, 0%, 50%, 0.2)",
+  },
+  {
+    id: "logo_nextjs",
+    label: "Next.js",
+    img: nextjs_img,
+    imgAlt: "Icono nextjs",
+    color: "hsl(270, 0%, 10%)",
+    colorOscuro: "hsla(270, 0%, 0%, 1)",
+    fondo: "hsla(270, 0%, 100%, 0.6)",
+  },
+  {
+    id: "logo_mongodb",
+    label: "MongoDB",
+    img: mongodb_img,
+    imgAlt: "Icono nextjs",
+    color: "hsl(490, 100%, 70%)",
+    colorOscuro: "hsl(490, 100%, 30%)",
+    fondo: "hsla(490, 100%, 70%, 10%)", 
   },
 ];
 

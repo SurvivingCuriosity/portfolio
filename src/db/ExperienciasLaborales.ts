@@ -1,6 +1,7 @@
 import { Skill, getSkills } from "@db/Skills";
 import nmi_img from "@img/empresas/nmi.webp";
 import xoborg_img from "@img/empresas/xoborg.webp";
+import futbolin_img from "@img/proyectos/icono_futbolin.svg";
 import nttdata_img from "@img/empresas/nttdata.webp";
 
 export interface ExperienciaLaboral {
@@ -17,11 +18,25 @@ export interface ExperienciaLaboral {
 
 export const ExperienciasLaborales: ExperienciaLaboral[] = [
   {
+    fechaInicio: new Date(2025, 2),
+    nombreEmpresa: "Futbol-in",
+    descripcion: [
+      "I developed this personal project for foosball enthusiasts, overseeing the application’s design, infrastructure, marketing, and social media.",
+      "Created with Next.js, Tailwind CSS, and MongoDB.",
+      "Supported by services such as Vercel for deployment, SendGrid for email delivery, and Google Cloud for image storage and the Maps API.",
+    ],
+    logoEmpresa: futbolin_img,
+    lugar: "Salamanca, Castilla y León, Spain",
+    nombrePuesto: "Fullstack Developer",
+    aptitudes: getSkills(["react", "next.js", "tailwind", "mongodb"]),
+  },
+  {
     fechaInicio: new Date(2023, 5),
+    fechaFin: new Date(2025, 4),
     nombreEmpresa: "Xoborg Technologies SL",
     descripcion: [
       "I participate in the development of clinic management software, where we use the following stack: React, Redux, Electron, Storybook, and Tailwind for styling.",
-      "We maintain constant communication with the backend team, seeking the best solution for each use case and any challenges that arise."
+      "We maintain constant communication with the backend team, seeking the best solution for each use case and any challenges that arise.",
     ],
     logoEmpresa: xoborg_img,
     lugar: "Salamanca, Castilla y León, Spain",
@@ -35,7 +50,7 @@ export const ExperienciasLaborales: ExperienciaLaboral[] = [
     descripcion: [
       "During my time at this company, I collaborated with the QA team in designing, profiling, and executing test cases for a public project with national reach and impact.",
       "This experience allowed me to understand the need for thoroughly tested software to prevent any unwanted application behavior from affecting the client.",
-      "I learned the basics of TDD, BDD, and how to apply them in the context of a software project using Selenium, the Gherkin language, and Cucumber."
+      "I learned the basics of TDD, BDD, and how to apply them in the context of a software project using Selenium, the Gherkin language, and Cucumber.",
     ],
     logoEmpresa: nttdata_img,
     lugar: "Salamanca, Castilla y León, Spain",
@@ -50,7 +65,7 @@ export const ExperienciasLaborales: ExperienciaLaboral[] = [
     descripcion: [
       "I completed my degree internship at NMI ERP, a Polish company that offers management solutions for all types of businesses using Microsoft Power Platform.",
       "I was able to take basic training courses in Power BI and Power Apps.",
-      "This was my first work experience, and I enjoyed an excellent work environment with people who were highly committed to including 'newbies' like me, with whom I communicated in English."
+      "This was my first work experience, and I enjoyed an excellent work environment with people who were highly committed to including 'newbies' like me, with whom I communicated in English.",
     ],
     logoEmpresa: nmi_img,
     lugar: "Rzeszow, Subcarpatia, Poland",
